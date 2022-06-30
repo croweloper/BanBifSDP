@@ -1,0 +1,67 @@
+
+                                        .legal {
+                                            padding: 20px 20px;
+                                            font-family: "Open Sans";
+                                            border-top: 2px black solid;
+                                        }
+
+                                        .legal__ejemplo {
+                                            display: grid;
+                                            grid-template-columns: 1fr 1fr;
+                                            align-items: center;
+                                        }
+
+                                        .legal__ejemplo img {
+                                            margin-bottom: 10px;
+                                            height: 70px;
+                                            margin-left: auto;
+                                            margin-right: auto;
+                                        }
+
+                                        .legal__ejemplo p {
+                                            font-size: 10px;
+                                            text-align: center;
+                                            margin-bottom: 20px;
+                                            grid-column-end: span 2;
+                                            color: #333333;
+                                        }
+
+                                        .legal__texto {
+                                            font-size: 10px;
+                                            text-align: justify;
+                                            margin-bottom: 15px;
+                                            color: #868686;
+                                        }
+
+                                        .legal__texto strong {
+                                            font-size: 10px;
+                                        }
+
+                                        @media (min-width: 768px) {
+                                            .legal__ejemplo {
+                                                display: flex;
+                                                margin-bottom: 20px;
+                                                align-items: center;
+                                            }
+
+                                            .legal__ejemplo img {
+                                                height: 70px;
+                                                width: auto;
+                                                margin: 0;
+                                            }
+
+                                            .legal__trea {
+                                                order: 1;
+                                            }
+
+                                            .legal__ejemplo p {
+                                                order: 2;
+                                                text-align: justify;
+                                                margin: 0 20px;
+                                                font-size: 10px;
+                                            }
+
+                                            .legal__compromiso {
+                                                order: 3;
+                                            }
+                                        }
