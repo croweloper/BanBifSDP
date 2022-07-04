@@ -82,6 +82,7 @@
 
     <link rel="stylesheet" href="/Content/Portals/stylebanner.css">
     <link rel="stylesheet" href="/Content/Portals/stylelegal.css">
+    <link rel="stylesheet" href="/Content/Portals/stylesimulador.css">
 
 </head>
 
@@ -189,6 +190,7 @@
 
                     <div class="row dnnpane">
                         <div id="dnn_Detail_A" class="col-md-12 contentPane">
+                            <!-- banner -->
                             <div class="DnnModule DnnModule-DNN_HTML DnnModule-4505 DnnVersionableControl">
                                 <a name="4505"></a>
                                 <div class="DNNContainer_noTitle">
@@ -221,39 +223,112 @@
                                                     </div>
                                                 </div>
                                             </div>
-
-
-
-
                                         </div><!-- End_Module_4505 -->
                                     </div>
                                     <div class="clear"></div>
                                 </div>
-
                             </div>
-                            <div>
-                                <br>
-                                <label>Plazo : </label>
-
-                                <select id="cboPlazo">    </select>
-                                <br>
-
-
-                                <br>
-                                <label>Monto :</label> <input id="txtMonto" type="number" />
-                                <br>
-                                <br>
-                                <label>Tasa :</label> <label id="lblTasa"></label>
-                                <br>
-
-
-
-                                <br>
-                                <br>
-                                <button onclick="CalcularSimulacion()">Calcular</button>
-                                <br><br>
-                                <label>Interes Ganado :</label><label id="lblInteres"></label>
+                            <!-- banner Fin-->
+                            <!-- simulador -->
+                            <div class="pt-5 pb-5">
+                                <div class="centrado dp-simulador">
+                                    <div class="grilla-6 grilla-sm-12">
+                                        <div class="grilla-10 grilla-sm-12"  >
+                                            <h3 class="dp-title mb-2" >Simula tu inversión:</h3>
+                                        <label for="" class="mb-1">¿En qué moneda quieres invertir?
+                                        </label>
+                                        <div class="d-flex justify-content-between mb-2">
+                                                <a href="" class="dp-btn-select active">Soles</a>
+                                                <a href="" class="dp-btn-select">Dólares</a>
+                                        </div>
+                                        <div class="form-group dp-form-error">
+                                            <label for="txtMonto" class="mb-1">¿Cuánto deseas invertir? 
+                                                <span class="ico-info">
+                                                    <span class="dp-tooltip">Recuerda que a mayor monto, mejor tasa</span>
+                                                </span>
+                                            </label>
+                                            <input  class="form-control" id="txtMonto" type="number" placeholder="S/ 0" value="2000">
+                                            <span class="dp-text-error">Monto mínimo S/ 1,000 o US$ 300.</span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="plazoDP" class="mb-1">¿En cuánto tiempo?
+                                                <span class="ico-info">
+                                                    <span class="dp-tooltip">Recuerda que a mayor plazo, mejor tasa</span>
+                                                </span>
+                                            </label>
+                                            <select class="form-control" id="cboPlazo">
+                                                <option>Seleccione</option>
+                                                <option>90</option>
+                                                <option>180</option>
+                                                <option>360</option>
+                                                <option>720</option>
+                                              </select>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="grilla-6 grilla-sm-12 ">
+                                        <div class="dp-simulador-blue">
+                                            
+                                            <div class="row ">
+                                                <div class="grilla-7">
+                                                    <label class="mb-1" for="">Monto total a recibir</label>
+                                                    <h3 class="dp-monto" >s/20,000</h3>
+                                                </div>
+                                                <div class="grilla-5 mb-2">
+                                                    <label class="mb-1">Tasa :</label>
+                                                    <h3 class="dp-monto" id="lblTasa">5%</h3>
+                                                </div>
+                                                <div class="grilla-12">
+                                                    <label class="mb-1">Interés ganado al vencimiento [*]</label>
+                                                    <h3 class="dp-montoGanado mb-1 dp-opacity-5" id="lblInteres">s/1,000</h3>
+                                                    <button onclick="CalcularSimulacion()" class="slider__boton--blanco d-ambar">Simular</button>
+                                                    <br>
+                                                </div> 
+                                                <div class="grilla-6">
+                                                    <button  class="slider__boton--blanco">Abre tu depósito</button>
+                                                </div>
+                                                <div class="grilla-6">
+                                                    <button  class="slider__boton--blanco d-lineal">Calcular de nuevo</button>
+                                                </div>
+                                                <p class="grilla-12 mt-2 mb-1 dp-text-small">[*] Consulta más opciones de pago de intereses en nuestras oficinas BanBif</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
                             </div>
+                            <div class="pt-5 pb-5">
+                                <div class="centrado dp-simulador">
+                                    <div class="grilla-12">
+                                        <h3 class="dp-title mb-2 text-center" >Continua aquí para ver tu simulación</h3>
+                                        <p class="mt-1 mb-3 text-center">Estás cerca, completa tus datos y descubre cuánto crecería tu dinero</p>
+                                        <div class="d-flex justify-content-center"  >
+                                            <div class="grilla-4 grilla-sm-6">
+                                                <div class="form-group">
+                                                    <input  class="form-control" id="txtMonto" type="text" placeholder="DNI" >
+                                                </div>
+                                            </div>
+                                            <div class=" grilla-4 grilla-sm-6">
+                                                <div class="form-group">
+                                                    <input  class="form-control" id="txtMonto" type="text" placeholder="Correo Electrónico">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="checkbox text-center">
+                                            <label>
+                                              <input type="checkbox" value="">
+                                             <span class="dp-text-small dp-line-text">
+                                                He leído la <a href="">Politica de Tratamiento de Protección de Datos Personales</a>
+                                             </span>
+                                            </label>
+                                        </div>
+                                       <div class="d-flex justify-content-center">
+                                        <button onclick="CalcularSimulacion()" class="slider__boton--blanco d-ambar">Simular</button>
+                                       </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- banner -->
                             <div class="DnnModule DnnModule-DNN_HTML DnnModule-5307 DnnVersionableControl">
                                 <a name="5307"></a>
                                 <div class="DNNContainer_noTitle">
