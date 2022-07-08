@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="panelModelStoreContainer" CdmEntityContainer="panelEntities">
+    <EntitySetMapping Name="SDP_Log">
+      <EntityTypeMapping TypeName="panelModel.SDP_Log">
+        <MappingFragment StoreEntitySet="SDP_Log">
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idregistro" ColumnName="idregistro" />
+          <ScalarProperty Name="dni" ColumnName="dni" />
+          <ScalarProperty Name="paso" ColumnName="paso" />
+          <ScalarProperty Name="detalle" ColumnName="detalle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SDP_Plazo">
+      <EntityTypeMapping TypeName="panelModel.SDP_Plazo">
+        <MappingFragment StoreEntitySet="SDP_Plazo">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="plazo" ColumnName="plazo" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SDP_Registros">
+      <EntityTypeMapping TypeName="panelModel.SDP_Registros">
+        <MappingFragment StoreEntitySet="SDP_Registros">
+          <ScalarProperty Name="mail" ColumnName="mail" />
+          <ScalarProperty Name="registroid" ColumnName="registroid" />
+          <ScalarProperty Name="dni" ColumnName="dni" />
+          <ScalarProperty Name="monto" ColumnName="monto" />
+          <ScalarProperty Name="moneda" ColumnName="moneda" />
+          <ScalarProperty Name="plazo" ColumnName="plazo" />
+          <ScalarProperty Name="tasa" ColumnName="tasa" />
+          <ScalarProperty Name="interes" ColumnName="interes" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="Tdatos" ColumnName="Tdatos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SDP_Tarifario">
+      <EntityTypeMapping TypeName="panelModel.SDP_Tarifario">
+        <MappingFragment StoreEntitySet="SDP_Tarifario">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="plazo" ColumnName="plazo" />
+          <ScalarProperty Name="r1ka20k" ColumnName="r1ka20k" />
+          <ScalarProperty Name="r20ka30k" ColumnName="r20ka30k" />
+          <ScalarProperty Name="r30ka85k" ColumnName="r30ka85k" />
+          <ScalarProperty Name="r85ka100k" ColumnName="r85ka100k" />
+          <ScalarProperty Name="r100k" ColumnName="r100k" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SDP_ConsultaMatrizTarifas" FunctionName="panelModel.Store.SDP_ConsultaMatrizTarifas">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="panelModel.SDP_ConsultaMatrizTarifas_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="plazo" ColumnName="plazo" />
+          <ScalarProperty Name="r1ka20k" ColumnName="r1ka20k" />
+          <ScalarProperty Name="r20ka30k" ColumnName="r20ka30k" />
+          <ScalarProperty Name="r30ka85k" ColumnName="r30ka85k" />
+          <ScalarProperty Name="r85ka100k" ColumnName="r85ka100k" />
+          <ScalarProperty Name="r100k" ColumnName="r100k" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SDP_ConsultaPlazos" FunctionName="panelModel.Store.SDP_ConsultaPlazos">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="panelModel.SDP_ConsultaPlazos_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="plazo" ColumnName="plazo" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SDP_RegistrarSimulacionCliente" FunctionName="panelModel.Store.SDP_RegistrarSimulacionCliente" />
+    <EntitySetMapping Name="SDP_TarifarioDolares">
+      <EntityTypeMapping TypeName="panelModel.SDP_TarifarioDolares">
+        <MappingFragment StoreEntitySet="SDP_TarifarioDolares">
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="r4" ColumnName="r4" />
+          <ScalarProperty Name="r3" ColumnName="r3" />
+          <ScalarProperty Name="r2" ColumnName="r2" />
+          <ScalarProperty Name="r1" ColumnName="r1" />
+          <ScalarProperty Name="plazo" ColumnName="plazo" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SDP_ConsultaMatrizTarifasDolares" FunctionName="panelModel.Store.SDP_ConsultaMatrizTarifasDolares">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="panelModel.SDP_ConsultaMatrizTarifasDolares_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="plazo" ColumnName="plazo" />
+          <ScalarProperty Name="r1" ColumnName="r1" />
+          <ScalarProperty Name="r2" ColumnName="r2" />
+          <ScalarProperty Name="r3" ColumnName="r3" />
+          <ScalarProperty Name="r4" ColumnName="r4" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SDP_RegistrarLog" FunctionName="panelModel.Store.SDP_RegistrarLog" />
+  </EntityContainerMapping>
+</Mapping>

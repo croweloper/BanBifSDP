@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BanBif.SDP.APP", "BanBif.SDP.APP\BanBif.SDP.APP.csproj", "{790CBD23-0721-4BE2-B382-51871918F5D2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{950BE22F-970F-4C1D-87E6-068CA8140D89} = {950BE22F-970F-4C1D-87E6-068CA8140D89}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BanBif.SDP.API", "BanBif.SDP.API\BanBif.SDP.API.csproj", "{366DBE13-E518-46E5-90BF-955EACAC7FE7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{950BE22F-970F-4C1D-87E6-068CA8140D89} = {950BE22F-970F-4C1D-87E6-068CA8140D89}
+		{C56A35D0-723D-4FE9-B2D8-80AA688D5915} = {C56A35D0-723D-4FE9-B2D8-80AA688D5915}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BanBif.SDP.BE", "BanBif.SDP.BE\BanBif.SDP.BE.csproj", "{950BE22F-970F-4C1D-87E6-068CA8140D89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BanBif.SDP.DA", "BanBif.SDP.DA\BanBif.SDP.DA.csproj", "{FD1CF45A-9F8F-4515-8099-08BD55DDBF39}"
+	ProjectSection(ProjectDependencies) = postProject
+		{950BE22F-970F-4C1D-87E6-068CA8140D89} = {950BE22F-970F-4C1D-87E6-068CA8140D89}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BanBif.SDP.BL", "BanBif.SDP.BL\BanBif.SDP.BL.csproj", "{C56A35D0-723D-4FE9-B2D8-80AA688D5915}"
+	ProjectSection(ProjectDependencies) = postProject
+		{950BE22F-970F-4C1D-87E6-068CA8140D89} = {950BE22F-970F-4C1D-87E6-068CA8140D89}
+		{FD1CF45A-9F8F-4515-8099-08BD55DDBF39} = {FD1CF45A-9F8F-4515-8099-08BD55DDBF39}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{790CBD23-0721-4BE2-B382-51871918F5D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{790CBD23-0721-4BE2-B382-51871918F5D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{790CBD23-0721-4BE2-B382-51871918F5D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{790CBD23-0721-4BE2-B382-51871918F5D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{366DBE13-E518-46E5-90BF-955EACAC7FE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{366DBE13-E518-46E5-90BF-955EACAC7FE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{366DBE13-E518-46E5-90BF-955EACAC7FE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{366DBE13-E518-46E5-90BF-955EACAC7FE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{950BE22F-970F-4C1D-87E6-068CA8140D89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{950BE22F-970F-4C1D-87E6-068CA8140D89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{950BE22F-970F-4C1D-87E6-068CA8140D89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{950BE22F-970F-4C1D-87E6-068CA8140D89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD1CF45A-9F8F-4515-8099-08BD55DDBF39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD1CF45A-9F8F-4515-8099-08BD55DDBF39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD1CF45A-9F8F-4515-8099-08BD55DDBF39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD1CF45A-9F8F-4515-8099-08BD55DDBF39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C56A35D0-723D-4FE9-B2D8-80AA688D5915}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C56A35D0-723D-4FE9-B2D8-80AA688D5915}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C56A35D0-723D-4FE9-B2D8-80AA688D5915}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C56A35D0-723D-4FE9-B2D8-80AA688D5915}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CAD1C004-1955-47C1-BB2D-D33896E62E22}
+	EndGlobalSection
+EndGlobal
