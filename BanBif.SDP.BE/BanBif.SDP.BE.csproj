@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Log\LogResponse.cs" />
+    <Compile Include="Log\LogResult.cs" />
     <Compile Include="MatrizDolar\MatrizDolar_Obj.cs" />
     <Compile Include="MatrizDolar\MatrizDolar_ObjRequest.cs" />
     <Compile Include="MatrizDolar\MatrizDolar_ObjResponse.cs" />
@@ -57,7 +59,6 @@
     <Compile Include="Simulacion_BE.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Log\" />
     <Folder Include="Plazo\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

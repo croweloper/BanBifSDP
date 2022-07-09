@@ -290,7 +290,7 @@
                                                 <button class="slider__boton--blanco">Abre tu depósito</button>
                                             </div>
                                             <div id="divCalcularDenuevo" class="grilla-6">
-                                                <button class="slider__boton--blanco d-lineal">Calcular de nuevo</button>
+                                                <button id="btnCalcularDenuevo" onclick="CalcularDenuevo()"  class="slider__boton--blanco d-lineal">Calcular de nuevo</button>
                                             </div>
                                             <p class="grilla-12 mt-2 mb-1 dp-text-small">[*] Consulta más opciones de pago de intereses en nuestras oficinas BanBif</p>
                                         </div>
@@ -1023,12 +1023,12 @@
                 </div>
 
             </div>
-            <div class="DnnModule DnnModule-DNN_BifPie DnnModule-4504">
+            <!--<div class="DnnModule DnnModule-DNN_BifPie DnnModule-4504">
                 <a name="4504"></a>
                 <div class="DNNContainer_noTitle">
-                    <div id="dnn_ctr4504_ContentPane">
+                    <div id="dnn_ctr4504_ContentPane">-->
                         <!-- Start_Module_4504 -->
-                        <div id="dnn_ctr4504_ModuleContent" class="DNNModuleContent ModDNNBifPieC">
+                        <!--<div id="dnn_ctr4504_ModuleContent" class="DNNModuleContent ModDNNBifPieC">
                             <div id="mvcContainer-4504">
 
 
@@ -1114,9 +1114,9 @@
                                                             <li class="titleSec titleFooter"></li>
                                                         </ul>
                                                     </div>
-                                                </div>
+                                                </div>-->
                                                 <!-- FOOTER PHONES -->
-                                                <ul class="des-hide tb-mos menuRedes grilla-tb-12 text-center">
+                                                <!--<ul class="des-hide tb-mos menuRedes grilla-tb-12 text-center">
                                                     <li class="ml-0">
                                                         <a href="https://www.facebook.com/banbif"
                                                            class="fontIcoRedes ico-fb"></a>
@@ -1168,9 +1168,9 @@
                                                 <input type="hidden" id="finalText"
                                                        value="Banca Telef&#243;nica Persona Natural: Lima (01) 631-9000 Provincias 0-801-0-0456. &lt;br/&gt;Banca Telef&#243;nica Empresas: Lima (01) 625-3333 Provincias 0-801-0-0457. &lt;br/&gt;Recuerda que para bloquear tus tarjetas y/o reportar cargos no reconocidos puedes llamar a la Banca Telef&#243;nica las 24hrs.&lt;br&gt;Todos los derechos reservados Banbif 2016">
                                                 <div class="grilla-10 des-center text-center pb-3">
-                                                    <p class="mt-3 txt-parrafo finalText"></p>
+                                                    <p class="mt-3 txt-parrafo finalText"></p>-->
                                                     <!--Done-->
-                                                </div>
+                                                <!--</div>
                                             </div>
                                             <div class="grilla-6 btn-tb-footer bord-rig-tb des-hide2">
                                                 <div class="text-center">
@@ -1247,16 +1247,16 @@
 
 
 
-                        </div><!-- End_Module_4504 -->
-                    </div>
+                        </div>--><!-- End_Module_4504 -->
+                    <!--</div>
                     <div class="clear"></div>
                 </div>
 
-            </div>
+            </div>-->
         </div>
     </div>
 
-    <div class="container">
+    <!--<div class="container">
         <main role="main">
             <div id="mainContent-inner2">
                 <div class="row dnnpane">
@@ -1264,9 +1264,9 @@
                         <div class="DnnModule DnnModule-DNN_HTML DnnModule-4500 DnnVersionableControl">
                             <a name="4500"></a>
                             <div class="DNNContainer_noTitle">
-                                <div id="dnn_ctr4500_ContentPane">
+                                <div id="dnn_ctr4500_ContentPane">-->
                                     <!-- Start_Module_4500 -->
-                                    <div id="dnn_ctr4500_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+                                    <!--<div id="dnn_ctr4500_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
                                         <div id="dnn_ctr4500_HtmlModule_lblContent">
                                             <script rel="display: none;"
                                                     src="/Content/Portals/0/Landings/holabank/js/modal-holabank.js"></script>
@@ -1330,24 +1330,24 @@
 
 
 
-                                    </div><!-- End_Module_4500 -->
-                                </div>
+                                    </div>--><!-- End_Module_4500 -->
+                                <!--</div>
                                 <div class="clear"></div>
                             </div>
 
                         </div>
                     </div>
                 </div>
-            </div><!-- /.mainContent-inner -->
-        </main>
+            </div>--><!-- /.mainContent-inner -->
+        <!--</main>-->
         <!-- /.mainContent -->
-    </div>
+    <!--</div>-->
     <!-- /.container -->
     <!-- Footer -->
-    <footer role="contentinfo">
+    <!--<footer role="contentinfo">
         <div id="dnn_footer" class="DNNEmptyPane">
         </div>
-    </footer>
+    </footer>-->
 
     <script type="text/javascript" src="/Content/Portals/_default/Skins/BANBIF_Skin/js/jquery.cycle2.min.js"></script>
     <script type="text/javascript" src="/Content/Portals/_default/Skins/BANBIF_Skin/jqueryui/jquery-ui.js"></script>
@@ -1388,6 +1388,19 @@
 
     }
 
+    function CalcularDenuevo() {
+               
+
+        var opcion = confirm("Desea realizar un nuevo calculo");
+        if (opcion == true) {
+            window.location.reload()
+        } else {
+            
+        }
+
+    }
+    
+
     function ActivarSoles() {
 
         if (btnSoles.classList.contains("active")) {
@@ -1401,9 +1414,41 @@
             }
         }
 
-
         sessionStorage.setItem('moneda', 'Soles');
         console.log("Cambio a Soles")
+
+        var oBDataExtra = {};
+
+        $.ajax({
+            url: sessionStorage.APP + 'Simulador/ObtenerMatriz1',
+            type: "POST",
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            processData: true,
+            data: JSON.stringify(oBDataExtra),
+            success: function (response) {
+                console.log(response.Data.Matriz);
+                matriz = response.Data.Matriz;
+                CalcularCambio();
+
+            },
+            failure: function (msg) {
+                console.log(msg);
+                //$.unblockUI();
+            },
+            error: function (xhr, status, error) {
+                console.log(error);
+                //$.unblockUI();
+            },
+            complete: function () {
+                //$.unblockUI();
+                //$("#prueba").dialog("close")
+            }
+        });
+
+        
+
+
 
     }
 
@@ -1424,8 +1469,197 @@
         sessionStorage.setItem('moneda', 'Dolares');
         console.log("Cambio a Dolares");
 
+        var oBDataExtra = {};
+
+        $.ajax({
+            url: sessionStorage.APP + 'Simulador/ObtenerMatrizDolar',
+            type: "POST",
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            processData: true,
+            data: JSON.stringify(oBDataExtra),
+            success: function (response) {
+                console.log(response.Data.Matriz);
+                matriz = response.Data.Matriz;
+                CalcularCambio()
+
+            },
+            failure: function (msg) {
+                console.log(msg);
+                //$.unblockUI();
+            },
+            error: function (xhr, status, error) {
+                console.log(error);
+                //$.unblockUI();
+            },
+            complete: function () {
+                //$.unblockUI();
+                //$("#prueba").dialog("close")
+            }
+        });
+
+        
+
     }
 
+    function CalcularCambio() {
+        {
+                       
+            var cboPlazo = document.getElementById("cboPlazo")
+            var tasa = document.getElementById("lblTasa");
+            var lblErrorMonto = document.getElementById("lblErrorMonto")
+            var monto = document.getElementById("txtMonto").value;
+            sessionStorage.setItem('plazo', cboPlazo.value);
+
+            if (sessionStorage.moneda == 'Soles') {
+                console.log('Entro a Soles')
+                for (var i in matriz) {
+                    if (matriz[i].plazo == cboPlazo.value) {
+
+                        if (monto >= 1000 && monto < 20000) {
+                            tasa.textContent = matriz[i].r1ka20k + '%'
+                            sessionStorage.setItem('tasa', matriz[i].r1ka20k);
+
+                            console.log(sessionStorage.tasa + '' + cboPlazo.value);
+                            console.log(matriz[i].r1ka20k);
+                            console.log(matriz[i]);
+
+                            lblErrorMonto.hidden = true;
+                            if (content_monto.classList.contains("dp-form-error")) {
+                                content_monto.classList.toggle("dp-form-error")
+                            } else {
+
+                            }
+                            //tasa.value = item.r1ka20k
+                        } else if (monto >= 20000 && monto < 30000) {
+                            tasa.textContent = matriz[i].r20ka30k + '%'
+                            lblErrorMonto.hidden = true;
+                            if (content_monto.classList.contains("dp-form-error")) {
+                                content_monto.classList.toggle("dp-form-error")
+                            } else {
+
+                            }
+                            sessionStorage.setItem('tasa', matriz[i].r20ka30k);
+                            //tasa.value = item.r20ka30k
+                        } else if (monto >= 30000 && monto < 85000) {
+                            sessionStorage.setItem('tasa', matriz[i].r30ka85k);
+                            tasa.textContent = matriz[i].r30ka85k + '%'
+                            lblErrorMonto.hidden = true;
+                            if (content_monto.classList.contains("dp-form-error")) {
+                                content_monto.classList.toggle("dp-form-error")
+                            } else {
+
+                            }
+                            //tasa.value = item.r30ka85k
+                        } else if (monto >= 85000 && monto < 100000) {
+                            sessionStorage.setItem('tasa', matriz[i].r85ka100k);
+                            tasa.textContent = matriz[i].r85ka100k + '%'
+                            if (content_monto.classList.contains("dp-form-error")) {
+                                content_monto.classList.toggle("dp-form-error")
+                            } else {
+
+                            }
+                            lblErrorMonto.hidden = true;
+                            //tasa.value = item.r85ka100k
+                        } else if (monto >= 100000) {
+                            sessionStorage.setItem('tasa', matriz[i].r100k);
+                            tasa.textContent = matriz[i].r100k + '%'
+                            if (content_monto.classList.contains("dp-form-error")) {
+                                content_monto.classList.toggle("dp-form-error")
+                            } else {
+
+                            }
+                            lblErrorMonto.hidden = true;
+                            //tasa.value = item.r100k
+                        } else {
+                            sessionStorage.setItem('tasa', '0');
+                            tasa.textContent = '0' + '%'
+                            if (content_monto.classList.contains("dp-form-error")) {
+
+
+                            } else {
+                                content_monto.classList.toggle("dp-form-error")
+
+                                lblErrorMonto.hidden = false;
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            } else if (sessionStorage.moneda == 'Dolares') {
+
+                console.log('Entro a Dolares');
+
+                for (var i in matriz) {
+                    if (matriz[i].plazo == cboPlazo.value) {
+
+                        if (monto >= 350 && monto < 5000) {
+                            tasa.textContent = matriz[i].r1 + '%'
+                            sessionStorage.setItem('tasa', matriz[i].r1);
+                            console.log(sessionStorage.tasa);
+                            lblErrorMonto.hidden = true;
+                            if (content_monto.classList.contains("dp-form-error")) {
+                                content_monto.classList.toggle("dp-form-error")
+                            } else {
+
+                            }
+                            //tasa.value = item.r1ka20k
+                        } else if (monto >= 5000 && monto < 10000) {
+                            tasa.textContent = matriz[i].r2 + '%'
+                            lblErrorMonto.hidden = true;
+                            if (content_monto.classList.contains("dp-form-error")) {
+                                content_monto.classList.toggle("dp-form-error")
+                            } else {
+
+                            }
+                            sessionStorage.setItem('tasa', matriz[i].r2);
+                            //tasa.value = item.r20ka30k
+                        } else if (monto >= 10000 && monto < 50000) {
+                            sessionStorage.setItem('tasa', matriz[i].r3);
+                            tasa.textContent = matriz[i].r3 + '%'
+                            lblErrorMonto.hidden = true;
+                            if (content_monto.classList.contains("dp-form-error")) {
+                                content_monto.classList.toggle("dp-form-error")
+                            } else {
+
+                            }
+                            //tasa.value = item.r30ka85k
+                        } else if (monto >= 50000) {
+                            sessionStorage.setItem('tasa', matriz[i].r4);
+                            tasa.textContent = matriz[i].r4 + '%'
+                            if (content_monto.classList.contains("dp-form-error")) {
+                                content_monto.classList.toggle("dp-form-error")
+                            } else {
+
+                            }
+                            lblErrorMonto.hidden = true;
+                            //tasa.value = item.r100k
+                        } else {
+                            sessionStorage.setItem('tasa', '0');
+                            tasa.textContent = '0' + '%'
+                            if (content_monto.classList.contains("dp-form-error")) {
+
+
+                            } else {
+                                content_monto.classList.toggle("dp-form-error")
+
+                                lblErrorMonto.hidden = false;
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
 
 
     $(document).ready(function () {
@@ -1451,8 +1685,18 @@
             processData: true,
             data: JSON.stringify(oBDataExtra),
             success: function (response) {
-                console.log(response);
-                matriz = response.Data.Matriz
+                console.log(response.Data.Matriz);
+                matriz = response.Data.Matriz;
+
+
+                $.each(response.Data.Matriz, function (i, item) {
+                    $('#cboPlazo').append($('<option>', {
+                        value: item.plazo,
+                        text: item.plazo
+                    }));
+                });
+
+
 
             },
             failure: function (msg) {
@@ -1492,108 +1736,33 @@
 
         var cboPlazo = document.getElementById("cboPlazo")
 
-        cboPlazo.addEventListener("change", function () {
-            var tasa = document.getElementById("lblTasa");
-            var lblErrorMonto = document.getElementById("lblErrorMonto")
-            var monto = document.getElementById("txtMonto").value;
-            sessionStorage.setItem('plazo', cboPlazo.value);
-
-            BuscarEnMatriz(cboPlazo.value);
-            for (var i in matriz) {
-                if (matriz[i].plazo == cboPlazo.value) {
-
-                    if (monto >= 1000 && monto < 20000) {
-                        tasa.textContent = matriz[i].r1ka20k + '%'
-                        sessionStorage.setItem('tasa', matriz[i].r1ka20k);
-                        lblErrorMonto.hidden = true;
-                        if (content_monto.classList.contains("dp-form-error")) {
-                            content_monto.classList.toggle("dp-form-error")
-                        } else {
-
-                        }
-                        //tasa.value = item.r1ka20k
-                    } else if (monto >= 20000 && monto < 30000) {
-                        tasa.textContent = matriz[i].r20ka30k + '%'
-                        lblErrorMonto.hidden = true;
-                        if (content_monto.classList.contains("dp-form-error")) {
-                            content_monto.classList.toggle("dp-form-error")
-                        } else {
-
-                        }
-                        sessionStorage.setItem('tasa', matriz[i].r20ka30k);
-                        //tasa.value = item.r20ka30k
-                    } else if (monto >= 30000 && monto < 85000) {
-                        sessionStorage.setItem('tasa', matriz[i].r30ka85k);
-                        tasa.textContent = matriz[i].r30ka85k + '%'
-                        lblErrorMonto.hidden = true;
-                        if (content_monto.classList.contains("dp-form-error")) {
-                            content_monto.classList.toggle("dp-form-error")
-                        } else {
-
-                        }
-                        //tasa.value = item.r30ka85k
-                    } else if (monto >= 85000 && monto < 100000) {
-                        sessionStorage.setItem('tasa', matriz[i].r85ka100k);
-                        tasa.textContent = matriz[i].r85ka100k + '%'
-                        if (content_monto.classList.contains("dp-form-error")) {
-                            content_monto.classList.toggle("dp-form-error")
-                        } else {
-
-                        }
-                        lblErrorMonto.hidden = true;
-                        //tasa.value = item.r85ka100k
-                    } else if (monto >= 100000) {
-                        sessionStorage.setItem('tasa', matriz[i].r100k);
-                        tasa.textContent = matriz[i].r100k + '%'
-                        if (content_monto.classList.contains("dp-form-error")) {
-                            content_monto.classList.toggle("dp-form-error")
-                        } else {
-
-                        }
-                        lblErrorMonto.hidden = true;
-                        //tasa.value = item.r100k
-                    } else {
-                        sessionStorage.setItem('tasa', 0);
-                        tasa.textContent = 0 + '%'
-                        if (content_monto.classList.contains("dp-form-error")) {
-
-
-                        } else {
-                            content_monto.classList.toggle("dp-form-error")
-
-                            lblErrorMonto.hidden = false;
-                        }
-
-                    }
-
-                }
-
-            }
-        });
+        cboPlazo.addEventListener("change", CalcularCambio);
 
 
 
 
+        
 
-        $.ajax({
 
-            url: "https://localhost:44343/api/sdp/obtenerPlazos",
-            type: "POST",
-            dataType: "json",
-            contentType: "application/json; charset=utf-8",
-            processData: true,
-            success: function (resp) {
-                console.log(resp);
+        //$.ajax({
 
-                $.each(resp, function (i, item) {
-                    $('#cboPlazo').append($('<option>', {
-                        value: item.plazo,
-                        text: item.plazo
-                    }));
-                });
+        //    url: "https://localhost:44343/api/sdp/obtenerPlazos",
+        //    type: "POST",
+        //    dataType: "json",
+        //    contentType: "application/json; charset=utf-8",
+        //    processData: true,
+        //    success: function (resp) {
+        //        console.log(resp);
 
-            }
-        });
+        //        $.each(resp, function (i, item) {
+        //            $('#cboPlazo').append($('<option>', {
+        //                value: item.plazo,
+        //                text: item.plazo
+        //            }));
+        //        });
+
+        //    }
+        //});
 
 
 
@@ -1643,6 +1812,10 @@
 
         cboPlazo.disabled = true;
 
+        var txtMonto = document.getElementById("txtMonto")
+
+        txtMonto.disabled = true;
+
 
         var oBDataExtra = {};
 
@@ -1683,7 +1856,7 @@
         var txtMonto = document.getElementById("txtMonto")
         var cboPlazo = document.getElementById("cboPlazo")
         if (cboPlazo.value == 'Seleccione') {
-            alert('Seleccione una taza');
+            alert('Seleccione cuanto tiempo desea invertir');
             return;
         }
         //else if (txtMonto.value < 1000) {
@@ -1779,8 +1952,6 @@
 
         //    }
         //});
-
-
 
 
 

@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Log_BL.cs" />
     <Compile Include="Matriz_BL.cs" />
     <Compile Include="Plazo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
