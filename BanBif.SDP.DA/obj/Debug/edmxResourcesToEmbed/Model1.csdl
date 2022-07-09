@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="panelModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="SDP_Log">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="idregistro" Type="Int32" />
+    <Property Name="dni" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="paso" Type="Int32" />
+    <Property Name="detalle" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="fecha" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="SDP_Plazo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="plazo" Type="Int32" />
+    <Property Name="estado" Type="Int32" />
+  </EntityType>
+  <EntityType Name="SDP_Registros">
+    <Key>
+      <PropertyRef Name="registroid" />
+    </Key>
+    <Property Name="registroid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="dni" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="monto" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="moneda" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="plazo" Type="Int32" />
+    <Property Name="tasa" Type="Decimal" Precision="4" Scale="2" />
+    <Property Name="interes" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="fecha" Type="DateTime" Precision="3" />
+    <Property Name="Tdatos" Type="Int32" />
+    <Property Name="mail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SDP_Tarifario">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="plazo" Type="Int32" />
+    <Property Name="r1ka20k" Type="Decimal" Precision="4" Scale="2" />
+    <Property Name="r20ka30k" Type="Decimal" Precision="4" Scale="2" />
+    <Property Name="r30ka85k" Type="Decimal" Precision="4" Scale="2" />
+    <Property Name="r85ka100k" Type="Decimal" Precision="4" Scale="2" />
+    <Property Name="r100k" Type="Decimal" Precision="4" Scale="2" />
+    <Property Name="estado" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="panelEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="SDP_Log" EntityType="Self.SDP_Log" />
+    <EntitySet Name="SDP_Plazo" EntityType="Self.SDP_Plazo" />
+    <EntitySet Name="SDP_Registros" EntityType="Self.SDP_Registros" />
+    <EntitySet Name="SDP_Tarifario" EntityType="Self.SDP_Tarifario" />
+    <FunctionImport Name="SDP_ConsultaMatrizTarifas" ReturnType="Collection(panelModel.SDP_ConsultaMatrizTarifas_Result)" />
+    <FunctionImport Name="SDP_ConsultaPlazos" ReturnType="Collection(panelModel.SDP_ConsultaPlazos_Result)" />
+    <FunctionImport Name="SDP_RegistrarSimulacionCliente">
+      <Parameter Name="dni" Mode="In" Type="String" />
+      <Parameter Name="mail" Mode="In" Type="String" />
+      <Parameter Name="monto" Mode="In" Type="Decimal" />
+      <Parameter Name="moneda" Mode="In" Type="String" />
+      <Parameter Name="plazo" Mode="In" Type="Int32" />
+      <Parameter Name="tasa" Mode="In" Type="Decimal" />
+      <Parameter Name="interes" Mode="In" Type="Decimal" />
+      <Parameter Name="Tdatos" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="SDP_TarifarioDolares" EntityType="panelModel.SDP_TarifarioDolares" />
+    <FunctionImport Name="SDP_ConsultaMatrizTarifasDolares" ReturnType="Collection(panelModel.SDP_ConsultaMatrizTarifasDolares_Result)" />
+    <FunctionImport Name="SDP_RegistrarLog">
+      <Parameter Name="dni" Mode="In" Type="String" />
+      <Parameter Name="idregistro" Mode="In" Type="Int32" />
+      <Parameter Name="paso" Mode="In" Type="Int32" />
+      <Parameter Name="detalle" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="SDP_ConsultaMatrizTarifas_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="Int32" Name="plazo" Nullable="true" />
+    <Property Type="Decimal" Name="r1ka20k" Nullable="true" Precision="4" Scale="2" />
+    <Property Type="Decimal" Name="r20ka30k" Nullable="true" Precision="4" Scale="2" />
+    <Property Type="Decimal" Name="r30ka85k" Nullable="true" Precision="4" Scale="2" />
+    <Property Type="Decimal" Name="r85ka100k" Nullable="true" Precision="4" Scale="2" />
+    <Property Type="Decimal" Name="r100k" Nullable="true" Precision="4" Scale="2" />
+    <Property Type="Int32" Name="estado" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SDP_ConsultaPlazos_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="Int32" Name="plazo" Nullable="true" />
+    <Property Type="Int32" Name="estado" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="SDP_TarifarioDolares">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="plazo" Type="Int32" />
+    <Property Name="r1" Type="Decimal" Precision="4" Scale="2" />
+    <Property Name="r2" Type="Decimal" Precision="4" Scale="2" />
+    <Property Name="r3" Type="Decimal" Precision="4" Scale="2" />
+    <Property Name="r4" Type="Decimal" Precision="4" Scale="2" />
+    <Property Name="estado" Type="Int32" />
+  </EntityType>
+  <ComplexType Name="SDP_ConsultaMatrizTarifasDolares_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="Int32" Name="plazo" Nullable="true" />
+    <Property Type="Decimal" Name="r1" Nullable="true" Precision="4" Scale="2" />
+    <Property Type="Decimal" Name="r2" Nullable="true" Precision="4" Scale="2" />
+    <Property Type="Decimal" Name="r3" Nullable="true" Precision="4" Scale="2" />
+    <Property Type="Decimal" Name="r4" Nullable="true" Precision="4" Scale="2" />
+    <Property Type="Int32" Name="estado" Nullable="true" />
+  </ComplexType>
+</Schema>

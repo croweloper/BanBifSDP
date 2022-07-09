@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="panelModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="SDP_Log">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idregistro" Type="int" />
+    <Property Name="dni" Type="varchar" MaxLength="12" />
+    <Property Name="paso" Type="int" />
+    <Property Name="detalle" Type="varchar" MaxLength="300" />
+    <Property Name="fecha" Type="datetime" />
+  </EntityType>
+  <EntityType Name="SDP_Plazo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="plazo" Type="int" />
+    <Property Name="estado" Type="int" />
+  </EntityType>
+  <EntityType Name="SDP_Registros">
+    <Key>
+      <PropertyRef Name="registroid" />
+    </Key>
+    <Property Name="registroid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="dni" Type="varchar" MaxLength="12" />
+    <Property Name="mail" Type="varchar" MaxLength="100" />
+    <Property Name="monto" Type="money" />
+    <Property Name="moneda" Type="varchar" MaxLength="10" />
+    <Property Name="plazo" Type="int" />
+    <Property Name="tasa" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="interes" Type="money" />
+    <Property Name="fecha" Type="datetime" />
+    <Property Name="Tdatos" Type="int" />
+  </EntityType>
+  <EntityType Name="SDP_Tarifario">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="plazo" Type="int" />
+    <Property Name="r1ka20k" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="r20ka30k" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="r30ka85k" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="r85ka100k" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="r100k" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="estado" Type="int" />
+  </EntityType>
+  <EntityType Name="SDP_TarifarioDolares">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="plazo" Type="int" />
+    <Property Name="r1" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="r2" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="r3" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="r4" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="estado" Type="int" />
+  </EntityType>
+  <Function Name="SDP_ConsultaMatrizTarifas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SDP_ConsultaMatrizTarifasDolares" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SDP_ConsultaPlazos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SDP_RegistrarLog" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dni" Type="varchar" Mode="In" />
+    <Parameter Name="idregistro" Type="int" Mode="In" />
+    <Parameter Name="paso" Type="int" Mode="In" />
+    <Parameter Name="detalle" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SDP_RegistrarSimulacionCliente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dni" Type="varchar" Mode="In" />
+    <Parameter Name="mail" Type="varchar" Mode="In" />
+    <Parameter Name="monto" Type="money" Mode="In" />
+    <Parameter Name="moneda" Type="varchar" Mode="In" />
+    <Parameter Name="plazo" Type="int" Mode="In" />
+    <Parameter Name="tasa" Type="decimal" Mode="In" />
+    <Parameter Name="interes" Type="money" Mode="In" />
+    <Parameter Name="Tdatos" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="panelModelStoreContainer">
+    <EntitySet Name="SDP_Log" EntityType="Self.SDP_Log" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDP_Plazo" EntityType="Self.SDP_Plazo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDP_Registros" EntityType="Self.SDP_Registros" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDP_Tarifario" EntityType="Self.SDP_Tarifario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SDP_TarifarioDolares" EntityType="Self.SDP_TarifarioDolares" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
