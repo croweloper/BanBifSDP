@@ -14,6 +14,12 @@
 .dp-simulador-blue .dp-text-small{
     font-size: 12px;
 }
+.dp-text-small{
+    font-size:14px;
+}
+.dp-line-text{
+    line-height:1.5;
+}
 .dp-margin-auto{
     margin-right:auto;
     margin-left:auto;
@@ -134,4 +140,42 @@
     font-size:12px;
     margin: 0.5em 0 0;
     display: inline-block;
+}
+
+/*tabla*/
+.contenedorTabla .tg .tg-o9xr{
+  background-color: #AC96DC;
+}
+.contenedorTabla .tg .tg-o9xr.dp-blanco{
+    background-color: #fff;
+}
+.contenedorTabla .tg .tg-dj2v{
+    border-right: 1px dashed #AC96DC;
+}
+.contenedorTabla .plazo{
+    width: 80px;
+}
+.contenedorTabla .detalles{
+    border: 1px dashed #AC96DC;
+}
+.contenedorTabla .label{
+    display: inline-block;
+    font-weight: 400;
+    margin-bottom: .5em;
+}
+.contenedorTabla .label-dp{
+    background-color: #FFB81C;
+    border-radius: 6px;
+}
+
+/*card*/
+.dp-card{
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom:1em;
+}
+.dp-card_caption{
+    padding:1.7em 1em;
+   
 }

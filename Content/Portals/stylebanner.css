@@ -74,7 +74,7 @@
                 opacity: 0;
             }
         }
-
+        /*tabla*/
         .contenedorTabla {
             display: flex;
             justify-content: center;
@@ -89,7 +89,7 @@
             font-family: Arial, sans-serif;
             font-size: 14px;
             overflow: hidden;
-            padding: 10px 5px;
+            padding: 15px 5px;
             word-break: normal;
         }
 
@@ -121,7 +121,6 @@
             background-color: #ffffff;
             color: #868686;
             text-align: center;
-            vertical-align: top;
             border-right: 1px dashed #20a3ff;
         }
 
@@ -143,7 +142,7 @@
             float: none;
             clear: both;
         }
-
+        /*tabla fin*/
         #plantilla_landing {
             padding-top: 2em;
             padding-bottom: 2em;
