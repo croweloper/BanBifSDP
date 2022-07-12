@@ -12,3 +12,17 @@ C:\Users\DRomero\Desktop\MDP\Repositorios\Banbif.SDP\BanBif.SDP\BanBif.SDP.DA\ob
 C:\Users\DRomero\Desktop\MDP\Repositorios\Banbif.SDP\BanBif.SDP\BanBif.SDP.DA\obj\Debug\BanBif.SDP.DA.csproj.CopyComplete
 C:\Users\DRomero\Desktop\MDP\Repositorios\Banbif.SDP\BanBif.SDP\BanBif.SDP.DA\obj\Debug\BanBif.SDP.DA.dll
 C:\Users\DRomero\Desktop\MDP\Repositorios\Banbif.SDP\BanBif.SDP\BanBif.SDP.DA\obj\Debug\BanBif.SDP.DA.pdb
+C:\Users\DRomero\Desktop\MDP\Repositorios\Banbif.SDP\BanBifSDP\BanBif.SDP.DA\bin\Debug\BanBif.SDP.DA.dll.config
+C:\Users\DRomero\Desktop\MDP\Repositorios\Banbif.SDP\BanBifSDP\BanBif.SDP.DA\bin\Debug\BanBif.SDP.DA.dll
+C:\Users\DRomero\Desktop\MDP\Repositorios\Banbif.SDP\BanBifSDP\BanBif.SDP.DA\bin\Debug\BanBif.SDP.DA.pdb
+C:\Users\DRomero\Desktop\MDP\Repositorios\Banbif.SDP\BanBifSDP\BanBif.SDP.DA\bin\Debug\BanBif.SDP.BE.dll
+C:\Users\DRomero\Desktop\MDP\Repositorios\Banbif.SDP\BanBifSDP\BanBif.SDP.DA\bin\Debug\EntityFramework.dll
+C:\Users\DRomero\Desktop\MDP\Repositorios\Banbif.SDP\BanBifSDP\BanBif.SDP.DA\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\DRomero\Desktop\MDP\Repositorios\Banbif.SDP\BanBifSDP\BanBif.SDP.DA\bin\Debug\BanBif.SDP.BE.pdb
+C:\Users\DRomero\Desktop\MDP\Repositorios\Banbif.SDP\BanBifSDP\BanBif.SDP.DA\bin\Debug\EntityFramework.xml
+C:\Users\DRomero\Desktop\MDP\Repositorios\Banbif.SDP\BanBifSDP\BanBif.SDP.DA\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\DRomero\Desktop\MDP\Repositorios\Banbif.SDP\BanBifSDP\BanBif.SDP.DA\obj\Debug\BanBif.SDP.DA.csproj.AssemblyReference.cache
+C:\Users\DRomero\Desktop\MDP\Repositorios\Banbif.SDP\BanBifSDP\BanBif.SDP.DA\obj\Debug\BanBif.SDP.DA.csproj.CoreCompileInputs.cache
+C:\Users\DRomero\Desktop\MDP\Repositorios\Banbif.SDP\BanBifSDP\BanBif.SDP.DA\obj\Debug\BanBif.SDP.DA.csproj.CopyComplete
+C:\Users\DRomero\Desktop\MDP\Repositorios\Banbif.SDP\BanBifSDP\BanBif.SDP.DA\obj\Debug\BanBif.SDP.DA.dll
+C:\Users\DRomero\Desktop\MDP\Repositorios\Banbif.SDP\BanBifSDP\BanBif.SDP.DA\obj\Debug\BanBif.SDP.DA.pdb

@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Web.Http;
 using BanBif.SDP.BL;
 using BanBif.SDP.BE;
+using BanBif.SDP.BE.Log;
 using BanBif.SDP.BE.Matriz;
 using BanBif.SDP.BE.Simulacion;
 using System.Web.Http.Cors;
@@ -69,6 +70,15 @@ namespace BanBif.SDP.API.Controllers
         public IHttpActionResult RegistrarSimulacion(SimulacionResult request)
         {
             var oBL = new Simulacion_BL();
+            var resultado = oBL.RegistrarSimulacion(request);
+            return Json(resultado);
+        }
+
+        [Route("api/SDP/RegistrarLog")]
+        [HttpPost]
+        public IHttpActionResult RegistrarLog(LogResult request)
+        {
+            var oBL = new Log_BL();
             var resultado = oBL.RegistrarSimulacion(request);
             return Json(resultado);
         }

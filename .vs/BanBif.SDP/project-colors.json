@@ -1,0 +1,31 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "790cbd23-0721-4be2-b382-51871918f5d2": {
+      "ProjectGuid": "790cbd23-0721-4be2-b382-51871918f5d2",
+      "DisplayName": "BanBif.SDP.APP",
+      "ColorIndex": 0
+    },
+    "366dbe13-e518-46e5-90bf-955eacac7fe7": {
+      "ProjectGuid": "366dbe13-e518-46e5-90bf-955eacac7fe7",
+      "DisplayName": "BanBif.SDP.API",
+      "ColorIndex": 1
+    },
+    "fd1cf45a-9f8f-4515-8099-08bd55ddbf39": {
+      "ProjectGuid": "fd1cf45a-9f8f-4515-8099-08bd55ddbf39",
+      "DisplayName": "BanBif.SDP.DA",
+      "ColorIndex": 2
+    },
+    "950be22f-970f-4c1d-87e6-068ca8140d89": {
+      "ProjectGuid": "950be22f-970f-4c1d-87e6-068ca8140d89",
+      "DisplayName": "BanBif.SDP.BE",
+      "ColorIndex": 3
+    },
+    "c56a35d0-723d-4fe9-b2d8-80aa688d5915": {
+      "ProjectGuid": "c56a35d0-723d-4fe9-b2d8-80aa688d5915",
+      "DisplayName": "BanBif.SDP.BL",
+      "ColorIndex": 4
+    }
+  },
+  "NextColorIndex": 5
+}

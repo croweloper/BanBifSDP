@@ -4,3 +4,9 @@ C:\Users\DRomero\Desktop\MDP\Repositorios\Banbif.SDP\BanBif.SDP\BanBif.SDP.BE\ob
 C:\Users\DRomero\Desktop\MDP\Repositorios\Banbif.SDP\BanBif.SDP\BanBif.SDP.BE\obj\Debug\BanBif.SDP.BE.dll
 C:\Users\DRomero\Desktop\MDP\Repositorios\Banbif.SDP\BanBif.SDP\BanBif.SDP.BE\obj\Debug\BanBif.SDP.BE.pdb
 C:\Users\DRomero\Desktop\MDP\Repositorios\Banbif.SDP\BanBif.SDP\BanBif.SDP.BE\obj\Debug\BanBif.SDP.BE.csproj.AssemblyReference.cache
+C:\Users\DRomero\Desktop\MDP\Repositorios\Banbif.SDP\BanBifSDP\BanBif.SDP.BE\bin\Debug\BanBif.SDP.BE.dll
+C:\Users\DRomero\Desktop\MDP\Repositorios\Banbif.SDP\BanBifSDP\BanBif.SDP.BE\bin\Debug\BanBif.SDP.BE.pdb
+C:\Users\DRomero\Desktop\MDP\Repositorios\Banbif.SDP\BanBifSDP\BanBif.SDP.BE\obj\Debug\BanBif.SDP.BE.csproj.AssemblyReference.cache
+C:\Users\DRomero\Desktop\MDP\Repositorios\Banbif.SDP\BanBifSDP\BanBif.SDP.BE\obj\Debug\BanBif.SDP.BE.csproj.CoreCompileInputs.cache
+C:\Users\DRomero\Desktop\MDP\Repositorios\Banbif.SDP\BanBifSDP\BanBif.SDP.BE\obj\Debug\BanBif.SDP.BE.dll
+C:\Users\DRomero\Desktop\MDP\Repositorios\Banbif.SDP\BanBifSDP\BanBif.SDP.BE\obj\Debug\BanBif.SDP.BE.pdb
