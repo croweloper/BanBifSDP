@@ -541,7 +541,7 @@
                                 <span class="dp-tooltip">Recuerda que a mayor monto, mejor tasa</span>
                             </span>
                         </label>
-                        <input class="form-control" id="txtMonto" pattern="[0-9]*" type="Text" placeholder="S/ 0" value="1000">
+                        <input class="form-control" id="txtMonto" pattern="[0-9]*" type="Text" placeholder="S/ 0" value="1,000.00">
                         <span id="lblErrorMonto" class="dp-text-error">Monto mínimo S/ 1,000 o US$ 300.</span>
                     </div>
                     <div class="form-group">
@@ -563,7 +563,7 @@
                     <div class="row ">
                         <div class="grilla-7">
                             <label class="mb-1" for="">Monto total a recibir</label>
-                            <h3 id="lblTotalIntereses" class="dp-monto" S / 0</h3>
+                            <h3 id="lblTotalIntereses" class="dp-monto"> S/ 0</h3>
                         </div>
                         <div class="grilla-5 mb-2">
                             <label class="mb-1">Tasa :</label>
@@ -1606,9 +1606,15 @@
 
         var calculointeres = ((Math.pow(potencia, exponente) - 1) * montoSession).toFixed(2)
 
-        totalinteres.textContent = 'S/ ' + new Intl.NumberFormat('es-MX').format(totalInteresSumado);
+        var prefijo = 'S/ ';
 
-        interes.textContent = 'S/ ' + new Intl.NumberFormat('es-MX').format(calculointeres);
+        if (sessionStorage.moneda == 'Dolares') {
+            prefijo='$/ '
+        }
+
+        totalinteres.textContent = prefijo + new Intl.NumberFormat('es-MX').format(totalInteresSumado);
+
+        interes.textContent = prefijo + new Intl.NumberFormat('es-MX').format(calculointeres);
 
         if (sessionStorage.dni.length > 2 && sessionStorage.mail.length > 2) {
 
@@ -1622,50 +1628,6 @@
         }
 
         //Guardar Log 1
-
-
-        //$.ajax({
-
-        //    url: "https://localhost:44343/api/sdp/obtenermatriz",
-        //    type: "POST",
-        //    dataType: "json",
-        //    contentType: "application/json; charset=utf-8",
-        //    processData: true,
-        //    success: function (resp) {
-        //        console.log(resp);
-
-        //        $.each(resp, function (i, item) {
-        //            if (plazoid == item.id) {
-        //                //alert("coincicencia " + item.plazo)
-        //                if (monto >= 1000 && monto < 20000) {
-        //                    tasa.textContent = item.r1ka20k
-        //                    //tasa.value = item.r1ka20k
-        //                } else if (monto >= 20000 && monto < 30000) {
-        //                    tasa.textContent = item.r20ka30k
-        //                    //tasa.value = item.r20ka30k
-        //                } else if (monto >=30000  && monto < 85000) {
-        //                    tasa.textContent = item.r30ka85k
-        //                    //tasa.value = item.r30ka85k
-        //                } else if (monto >= 85000 && monto < 100000) {
-        //                    tasa.textContent = item.r85ka100k
-        //                    //tasa.value = item.r85ka100k
-        //                } else if (monto >= 100000) {
-        //                    tasa.textContent = item.r100k
-        //                    //tasa.value = item.r100k
-        //                }
-
-        //            }
-        //        });
-        //        console.log(plazo[plazoid]);
-        //        var exponente = (plazo[plazoid].value / 360);
-        //        var potencia = 1 + (tasa.textContent / 100);
-        //        interes.textContent = ((Math.pow(potencia, exponente) - 1) * monto).toFixed(2);
-
-
-        //    }
-        //});
-
-
 
 
     }
