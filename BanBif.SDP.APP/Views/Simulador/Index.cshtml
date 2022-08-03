@@ -1089,12 +1089,17 @@
 
             var txtMonto = document.getElementById("txtMonto")
 
-            txtMonto.disabled = false;
+        txtMonto.disabled = false;
+
+        if (sessionStorage.moneda == 'Soles') {
+            ActivarSoles()
+        } else if(sessionStorage.moneda == 'Dolares') {
+            ActivarDolares();
+        }
 
 
-        //} else {
-
-        //}
+        btnSoles.disabled = false;
+        btnDolares.disabled = false;
 
 
 
@@ -1388,7 +1393,7 @@
                 $.each(response.Data.Matriz, function (i, item) {
                     $('#cboPlazo').append($('<option>', {
                         value: item.plazo,
-                        text: item.plazo
+                        text: item.plazo+ ' días'
                     }));
                 });
 
@@ -1502,6 +1507,11 @@
 
         txtMonto.disabled = true;
 
+        btnDolares.classList.remove("active")
+        btnSoles.classList.remove("active");
+
+        btnSoles.disabled = true;
+        btnDolares.disabled = true;
 
         var oBDataExtra = {};
 
@@ -1609,7 +1619,7 @@
         var prefijo = 'S/ ';
 
         if (sessionStorage.moneda == 'Dolares') {
-            prefijo='$/ '
+            prefijo='$ '
         }
 
         totalinteres.textContent = prefijo + new Intl.NumberFormat('es-MX').format(totalInteresSumado);
