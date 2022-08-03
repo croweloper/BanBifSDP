@@ -1,0 +1,1646 @@
+﻿@{ ViewBag.Title = "Index"; }
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head id="Head">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+    <title>Depósito a Plazo BanBif</title>
+    <meta id="MetaDescription" name="DESCRIPTION" content="Deposito a Plazo BanBif" />
+    <meta id="MetaKeywords" name="KEYWORDS" content=",DotNetNuke,DNN" />
+    <meta id="MetaGenerator" name="GENERATOR" content="DotNetNuke " />
+    <meta id="MetaRobots" name="ROBOTS" content="INDEX, FOLLOW" />
+    <link href="~/Content/Resources/Shared/stylesheets/dnndefault/7.0.0/default.css?cdv=200" type="text/css"
+          rel="stylesheet" />
+    <link href="~/Content/DesktopModules/MVC/DNN_BifCabecera/module.css?cdv=200" type="text/css" rel="stylesheet" />
+    <link href="~/Content/DesktopModules/MVC/DNN_BifPie/module.css?cdv=200" type="text/css" rel="stylesheet" />
+    <link href="~/Content/Resources/Search/SearchSkinObjectPreview.css?cdv=200" type="text/css" rel="stylesheet" />
+    <link href="~/Content/Portals/_default/Skins/BANBIF_Skin/bootstrap/css/bootstrap.min.css?cdv=200" type="text/css"
+          rel="stylesheet" />
+    <link href="~/Content/Portals/_default/Skins/BANBIF_Skin/css/jquery.smartmenus.bootstrap.css?cdv=200" type="text/css"
+          rel="stylesheet" />
+    <link href="~/Content/Portals/_default/Skins/BANBIF_Skin/Menus/MainMenu/MainMenu.css?cdv=200" type="text/css"
+          rel="stylesheet" />
+    <link href="~/Content/Portals/_default/Skins/BANBIF_Skin/skin.css?cdv=200" type="text/css" rel="stylesheet" />
+    <link href="~/Content/Portals/_default/Containers/Cavalier/container.css?cdv=200" type="text/css" rel="stylesheet" />
+    <link href="~/Content/Portals/0/portal.css?cdv=200" type="text/css" rel="stylesheet" />
+    <script src="~/Content/Resources/libraries/jQuery/01_09_01/jquery.js?cdv=200" type="text/javascript"></script>
+    <script src="~/Content/Resources/libraries/jQuery-UI/01_11_03/jquery-ui.js?cdv=200" type="text/javascript"></script>
+
+    <link rel="SHORTCUT ICON" href="~/Content/Portals/0/favicon.ico?ver=2016-12-06-153923-940" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <!-- <script src="js/dnn.js?cdv=200" type="text/javascript"></script> -->
+    <script src="~/Content/js/dnn.modalpopup.js?cdv=200" type="text/javascript"></script>
+    <script src="~/Content/Portals/_default/Skins/BANBIF_Skin/bootstrap/js/bootstrap.min.js?cdv=200"
+            type="text/javascript"></script>
+    <script src="~/Content/Portals/_default/Skins/BANBIF_Skin/js/jquery.smartmenus.js?cdv=200"
+            type="text/javascript"></script>
+    <script src="~/Content/Portals/_default/Skins/BANBIF_Skin/js/jquery.smartmenus.bootstrap.js?cdv=200"
+            type="text/javascript"></script>
+    <script src="~/Content/Portals/_default/Skins/BANBIF_Skin/js/scripts.js?cdv=200" type="text/javascript"></script>
+    <script src="~/Content/js/dnncore.js?cdv=200" type="text/javascript"></script>
+    <script src="~/Content/Resources/Search/SearchSkinObjectPreview.js?cdv=200" type="text/javascript"></script>
+    <script src="~/Content/DesktopModules/DNNCorp/EvoqContentLibrary/ClientScripts/dnn.analytics.Injected.js?cdv=200"
+            type="text/javascript"></script>
+    <script src="~/Content/js/dnn.servicesframework.js?cdv=200" type="text/javascript"></script>
+    <!-- <script type="text/javascript">
+          //<![CDATA[
+          Sys.WebForms.PageRequestManager._initialize('ScriptManager', 'Form', [], [], [], 90, '');
+          //]]>
+      </script> -->
+
+    <link rel="stylesheet" type="text/css" href="~/Content/Portals/_default/Skins/BANBIF_Skin/css/reset.css?v=00.00.03B" />
+    <link rel="stylesheet" href="~/Content/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <link href="~/Content/css.css?family=Open+Sans:400italic,300,600,700,400" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css"
+          href="~/Content/Portals/_default/Skins/BANBIF_Skin/fonts/font.css?v=00.00.03B" />
+    <link rel="stylesheet" type="text/css" href="~/Content/Portals/_default/Skins/BANBIF_Skin/css/min.css?okns=0.0.3CCC" />
+    <link rel="stylesheet" type="text/css"
+          href="~/Content/Portals/_default/Skins/BANBIF_Skin/css/animation.css?v=00.00.03B" />
+    <link rel="stylesheet" type="text/css"
+          href="~/Content/Portals/_default/Skins/BANBIF_Skin/css/jquery.qtip.css?v=00.00.03B" />
+    <link href="~/Content/css.css?family=Open+Sans:400italic,300,600,700,400" rel="stylesheet" type="text/css" />
+
+    <!-- <script src="~/Content/DesktopModules/MyDnnSupport/LiveChat/Scripts/init-widget.js" type="text/javascript"></script> -->
+    <!-- <script
+          src="Telerik.Web.UI.WebResource.axd?_TSM_HiddenField_=ScriptManager_TSM&amp;compress=1&amp;_TSM_CombinedScripts_=%3b%3bSystem.Web.Extensions%2c+Version%3d4.0.0.0%2c+Culture%3dneutral%2c+PublicKeyToken%3d31bf3856ad364e35%3aen-US%3a4ff39ab4-86bc-4f97-a397-bc04a8fc5f51%3aea597d4b%3ab25378d2"
+          type="text/javascript"></script> -->
+
+    <link href="~/Content/DesktopModules/MVC/DNN_BifCabecera/Views/Item/style.css?vC01" type="text/css" rel="stylesheet" />
+    @*
+    <script src="~/Content/DesktopModules/MVC/DNN_BifCabecera/Views/Item/script.js?cdv=C01"
+            type="text/javascript"></script>*@
+
+    <!-- hola bank css -->
+    <link rel="stylesheet" href="~/Content/Portals/0/Landings/holabank/css/modal-holabank.css" />
+    <link rel="stylesheet" href="~/Content/Portals/0/Landings/pasivos/css/index.min.css" />
+    <link rel="stylesheet" href="~/Content/Portals/0/Landings/pasivos/carousel/owl.carousel.css" />
+    <script src="~/Content/Portals/0/Landings/pasivos/carousel/owl.carousel.js"></script>
+    <script rel="display: none;" src="~/Content/Portals/0/Landings/pasivos/javascript/pasivos.js"></script>
+    <script src="~/Content/Portals/0/Landings/holabank/js/holabank.js"></script>
+
+    <link rel="stylesheet" href="~/Content/Portals/stylebanner.css" />
+    <link rel="stylesheet" href="~/Content/Portals/stylelegal.css" />
+    <link rel="stylesheet" href="~/Content/Portals/stylesimulador.css" />
+</head>
+
+<body id="Body">
+    @*
+    <form method="post" action="#" id="Form" enctype="multipart/form-data">
+        *@
+
+        <!-- banner -->
+        <div class="banner1 section promocts bg-morado">
+            <div class="centrado">
+                <div class="grilla-6 grilla-sm-12">
+                    <div class="section mb-3 text-center-sm">
+                        <h2 class="textbnninter text-center-sm mt-4">
+                            Abre tu Depósito a Plazo con tasa promocional de hasta 7.25%
+                            TREA en soles
+                        </h2>
+                        <p style="color: #fff">Obtenla del 13/07/2022 al 31/08/2022</p>
+                        @*<a href="#" id="dp-modal-btn" class="slider__boton--blanco">
+                            Empieza ahora
+                        </a>*@
+                    </div>
+                </div>
+                <div class="grilla-6 grilla-sm-12 text-center">
+                    <img class="grafica-bnn" src="https://www.banbif.com.pe/Portals/0/Images/depositoplazo/bg-dp-home-01.png"
+                         style="max-height: 350px" />
+                </div>
+            </div>
+        </div>
+        <!-- banner Fin-->
+        <!-- texto-->
+        <section id="plantilla_landing">
+            <div class="centrado">
+                <div class="grilla-11 grilla-sm-12 text-center auto-0">
+                    <p class="subtitulo text-center mb-3">
+                        Ábrelo desde HOLABank
+                        <strong>
+                            y participa por un paquete de viaje doble para Qatar
+                        </strong>
+                    </p>
+                    <h3 style="color: #20a3ff; font-size: 16px">
+                        Fecha de Sorteo: 18/10/22
+                    </h3>
+                </div>
+                <div></div>
+            </div>
+            <section></section>
+        </section>
+        <!--carrusel-->
+        <div id="banbif-landing" class="pb-4">
+            <div class="banbif-finish">
+                <div class="banbif-finish-offers">
+                    <div class="centrado">
+                        <div id="benef" class="large-12 columns">
+                            <div class="owl-carousel owl-theme owl-loaded owl-drag">
+                                <div class="owl-stage-outer">
+                                    <div class="owl-stage" style="
+                        transition: all 0.25s ease 0s;
+                        width: 3513px;
+                        transform: translate3d(-1915px, 0px, 0px);
+                      ">
+                                        <div class="owl-item" style="width: 299.333px; margin-right: 20px">
+                                            <div class="item">
+                                                <div class="offers-item">
+                                                    <img class="desktop"
+                                                         src="https://www.banbif.com.pe/Portals/0/home/personas/img/iconos/ico-ahorro-dp.svg"
+                                                         alt="icono-beneficios" />
+                                                    <img class="mobile"
+                                                         src="https://www.banbif.com.pe/Portals/0/home/personas/img/iconos/ico-ahorro-dp-cyan.svg"
+                                                         alt="icono-beneficios" "=" ">
+                                                    <div class=" offers-item-inside">
+                                                        <p>
+                                                            Abre tu Depósito a Plazo desde S/1,000 o US$300
+                                                            desde tu celular o en oficinas a nivel nacional.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="owl-item" style="width: 299.333px; margin-right: 20px">
+                                            <div class="item">
+                                                <div class="offers-item">
+                                                    <img class="desktop"
+                                                         src="https://www.banbif.com.pe/Portals/0/home/personas/img/iconos/ico-recibo.svg"
+                                                         alt="icono-beneficios" />
+                                                    <img class="mobile"
+                                                         src="https://www.banbif.com.pe/Portals/0/home/personas/img/iconos/ico-recibo-cyan.svg"
+                                                         alt="icono-beneficios" "=" ">
+                                                    <div class=" offers-item-inside">
+                                                        <p>
+                                                            La renovación es automática al vencimiento con
+                                                            conficiones que mantenga vigentes BanBif.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="owl-item" style="width: 299.333px; margin-right: 20px">
+                                            <div class="item">
+                                                <div class="offers-item">
+                                                    <img class="desktop"
+                                                         src="https://www.banbif.com.pe/Portals/0/home/personas/img/iconos/icon_cajaFuerte.svg"
+                                                         alt="icono-beneficios" />
+                                                    <img class="mobile"
+                                                         src="https://www.banbif.com.pe/Portals/0/home/personas/img/iconos/icon_cajaFuerte-cyan.svg"
+                                                         alt="icono-beneficios" "=" ">
+                                                    <div class=" offers-item-inside">
+                                                        <p>
+                                                            Durante el plazo elegido no podrás realizar
+                                                            retiros parciales.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="owl-item active" style="width: 299.333px; margin-right: 20px">
+                                            <div class="item">
+                                                <div class="offers-item">
+                                                    <img class="desktop"
+                                                         src="https://www.banbif.com.pe/Portals/0/home/personas/img/iconos/ico-promo.svg"
+                                                         alt="icono-beneficios" />
+                                                    <img class="mobile"
+                                                         src="https://www.banbif.com.pe/Portals/0/home/personas/img/iconos/ico-promo-cyan.svg"
+                                                         alt="icono-beneficios" "=" ">
+                                                    <div class=" offers-item-inside">
+                                                        <p>
+                                                            Podrás acceder a las tasas promocionales a
+                                                            partir de S/2,000 o US$1,000.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="owl-item active" style="width: 299.333px; margin-right: 20px">
+                                            <div class="item">
+                                                <div class="offers-item">
+                                                    <img class="desktop"
+                                                         src="https://www.banbif.com.pe/Portals/0/home/personas/img/iconos/ico-billetes.svg"
+                                                         alt="icono-beneficios" />
+                                                    <img class="mobile"
+                                                         src="https://www.banbif.com.pe/Portals/0/home/personas/img/iconos/ico-billetes-cyan.svg"
+                                                         alt="icono-beneficios" "=" ">
+                                                    <div class=" offers-item-inside">
+                                                        <p>
+                                                            Tasa de interés de campaña para Depósitos a
+                                                            Plazo en soles o dólares de acuerdo al plazo
+                                                            elegido.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--tabs tasas -->
+        <div id="banbif-landing">
+            <div class="banb if-finish">
+                <div class="banbif-finish-tabs">
+                    <div class="centrado">
+                        <h3 class="dp-title mb-2 text-center">Tasas y plazos</h3>
+                        <div class="banbif-finish-tabs-links">
+                            <span class="links active" data-link="2">
+                                Soles
+                                <div class="links-bottom"></div>
+                            </span>
+                            <span class="links" data-link="3">
+                                Dolares
+                                <div class="links-bottom"></div>
+                            </span>
+                        </div>
+                        <div class="banbif-finish-tabs-block two active">
+                            <!-- tabla tasas soles-->
+                            <div class="centrado pt-1 pb-1">
+                                <div class="contenedorTabla mt-2">
+                                    <!-- <table class="tg">
+                                        <thead>
+                                          <tr>
+                                            <th
+                                              class="tg-o9xr dp-blanco"
+                                              colspan="1"
+                                              style="width: 150px"
+                                            ></th>
+                                            <th class="tg-o9xr" colspan="5">
+                                              <strong>Monto</strong>
+                                            </th>
+                                          </tr>
+                                          <tr>
+                                            <th class="tg-o9xr"><strong>Plazo</strong>(Días)</th>
+                                            <th class="tg-o9xr plazo">
+                                              Mayores o igual a S/1,000 y menor a S/20,000
+                                            </th>
+                                            <th class="tg-o9xr plazo">
+                                              Mayores o igual a S/20,000 y menor a S/30,000
+                                            </th>
+                                            <th class="tg-o9xr plazo">
+                                              Mayores o igual a S/30,000 y menor a S/85,000
+                                            </th>
+                                            <th class="tg-o9xr plazo">
+                                              Mayores o igual a S/85,000 y menor a S/100,00
+                                            </th>
+                                            <th class="tg-o9xr plazo">
+                                              Mayores o igual a S/100,000
+                                            </th>
+                                          </tr>
+                                        </thead>
+                                        <tbody class="detalles">
+                                          <tr class="filas">
+                                            <td class="tg-dj2v"><strong>30</strong></td>
+                                            <td class="tg-dj2v">0.80%</td>
+                                            <td class="tg-dj2v">0.80%</td>
+                                            <td class="tg-dj2v">1.20%</td>
+                                            <td class="tg-dj2v">1.40%</td>
+                                            <td class="tg-dj2v">1.40%</td>
+                                          </tr>
+                                          <tr class="filas">
+                                            <td class="tg-dj2v"><strong>60</strong></td>
+                                            <td class="tg-dj2v">0.80%</td>
+                                            <td class="tg-dj2v">0.80%</td>
+                                            <td class="tg-dj2v">1.20%</td>
+                                            <td class="tg-dj2v">1.40%</td>
+                                            <td class="tg-dj2v">1.40%</td>
+                                          </tr>
+                                          <tr class="filas">
+                                            <td class="tg-dj2v"><strong>90</strong></td>
+                                            <td class="tg-dj2v">1.25%</td>
+                                            <td class="tg-dj2v">3.90%</td>
+                                            <td class="tg-dj2v">3.90%</td>
+                                            <td class="tg-dj2v">3.90%</td>
+                                            <td class="tg-dj2v">4.00%</td>
+                                          </tr>
+                                          <tr class="filas">
+                                            <td class="tg-dj2v"><strong>180</strong></td>
+                                            <td class="tg-dj2v">1.25%</td>
+                                            <td class="tg-dj2v">4.15%</td>
+                                            <td class="tg-dj2v">4.15%</td>
+                                            <td class="tg-dj2v">4.15%</td>
+                                            <td class="tg-dj2v">4.25%</td>
+                                          </tr>
+                                          <tr class="filas">
+                                            <td class="tg-dj2v"><strong>270</strong></td>
+                                            <td class="tg-dj2v">1.25%</td>
+                                            <td class="tg-dj2v">4.30%</td>
+                                            <td class="tg-dj2v">4.30%</td>
+                                            <td class="tg-dj2v">4.30%</td>
+                                            <td class="tg-dj2v">4.50%</td>
+                                          </tr>
+                                          <tr class="filas">
+                                            <td class="tg-dj2v"><strong>360</strong></td>
+                                            <td class="tg-dj2v">1.40%</td>
+                                            <td class="tg-dj2v">5.25%</td>
+                                            <td class="tg-dj2v">5.25%</td>
+                                            <td class="tg-dj2v">5.25%</td>
+                                            <td class="tg-dj2v">5.75%</td>
+                                          </tr>
+                                          <tr class="filas">
+                                            <td class="tg-dj2v"><strong>540</strong></td>
+                                            <td class="tg-dj2v">1.40%</td>
+                                            <td class="tg-dj2v">5.40%</td>
+                                            <td class="tg-dj2v">5.40%</td>
+                                            <td class="tg-dj2v">5.40%</td>
+                                            <td class="tg-dj2v">5.90%</td>
+                                          </tr>
+                                          <tr class="filas">
+                                            <td class="tg-dj2v"><strong>720</strong></td>
+                                            <td class="tg-dj2v">1.40%</td>
+                                            <td class="tg-dj2v">5.90%</td>
+                                            <td class="tg-dj2v">5.90%</td>
+                                            <td class="tg-dj2v">5.90%</td>
+                                            <td class="tg-dj2v">6.05%</td>
+                                          </tr>
+                                          <tr class="filas">
+                                            <td class="tg-dj2v"><strong>900</strong></td>
+                                            <td class="tg-dj2v">1.40%</td>
+                                            <td class="tg-dj2v">5.90%</td>
+                                            <td class="tg-dj2v">5.90%</td>
+                                            <td class="tg-dj2v">5.90%</td>
+                                            <td class="tg-dj2v">6.05%</td>
+                                          </tr>
+                                          <tr class="filas">
+                                            <td class="tg-dj2v"><strong>1080</strong></td>
+                                            <td class="tg-dj2v">1.40%</td>
+                                            <td class="tg-dj2v">6.05%</td>
+                                            <td class="tg-dj2v">6.05%</td>
+                                            <td class="tg-dj2v">6.05%</td>
+                                            <td class="tg-dj2v">
+                                              <span class="label label-dp">Super Tasa</span>
+                                              <strong>6.50%</strong>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table> -->
+                                    <table class="tg">
+                                        <thead>
+                                            <tr>
+                                                <th class="tg-o9xr dp-blanco" colspan="1"></th>
+                                                <th class="tg-o9xr dp-blanco" colspan="1" style="width: 150px"></th>
+                                                <th class="tg-o9xr" colspan="7">
+                                                    <strong>TREA</strong> (Tasa de Rendimiento Efectivo
+                                                    Anual)
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th class="tg-o9xr plazo dp-blanco"></th>
+                                                <th class="tg-o9xr"><strong>Plazo</strong>(Días)</th>
+                                                <th class="tg-o9xr plazo">
+                                                    <strong>1080</strong>
+                                                </th>
+                                                <th class="tg-o9xr plazo">
+                                                    <strong>720</strong>
+                                                </th>
+                                                <th class="tg-o9xr plazo">
+                                                    <strong>540</strong>
+                                                </th>
+                                                <th class="tg-o9xr plazo">
+                                                    <strong>360</strong>
+                                                </th>
+                                                <th class="tg-o9xr plazo">
+                                                    <strong>270</strong>
+                                                </th>
+                                                <th class="tg-o9xr plazo">
+                                                    <strong>180</strong>
+                                                </th>
+                                                <th class="tg-o9xr plazo">
+                                                    <strong>90</strong>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="detalles">
+                                            <tr class="filas">
+                                                <td class="tg-o9xr plazo" rowspan="2">Monto</td>
+                                                <td class="tg-o9xr">
+                                                    Mayor o igual a S/2,000 y menor a S/100,000
+                                                </td>
+                                                <td class="tg-dj2v">6.50%</td>
+                                                <td class="tg-dj2v">6.20%</td>
+                                                <td class="tg-dj2v">6.00%</td>
+                                                <td class="tg-dj2v">5.75%</td>
+                                                <td class="tg-dj2v">5.00%</td>
+                                                <td class="tg-dj2v">4.75%</td>
+                                                <td class="tg-dj2v">4.00%</td>
+                                            </tr>
+                                            <tr class="filas">
+                                                <td class="tg-o9xr">Mayor o igual a S/100,000</td>
+                                                <td class="tg-dj2v">
+                                                    <span class="label label-dp">Super Tasa</span>
+                                                    <strong>7.25%</strong>
+                                                </td>
+                                                <td class="tg-dj2v">6.50%</td>
+                                                <td class="tg-dj2v">6.40%</td>
+                                                <td class="tg-dj2v">6.25%</td>
+                                                <td class="tg-dj2v">5.50%</td>
+                                                <td class="tg-dj2v">4.90%</td>
+                                                <td class="tg-dj2v">4.80%</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="banbif-finish-tabs-block three" style="display: none">
+                            <!-- tabla tasas dolares-->
+                            <div class="centrado pt-1 pb-1">
+                                <div class="contenedorTabla mt-2">
+                                    <table class="tg">
+                                        <thead>
+                                            <tr>
+                                                <th class="tg-o9xr dp-blanco" colspan="1"></th>
+                                                <th class="tg-o9xr dp-blanco" colspan="1" style="width: 150px"></th>
+                                                <th class="tg-o9xr" colspan="7">
+                                                    <strong>TREA</strong> (Tasa de Rendimiento Efectivo
+                                                    Anual)
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th class="tg-o9xr plazo dp-blanco"></th>
+                                                <th class="tg-o9xr"><strong>Plazo</strong>(Días)</th>
+                                                <th class="tg-o9xr plazo">
+                                                    <strong>1080</strong>
+                                                </th>
+                                                <th class="tg-o9xr plazo">
+                                                    <strong>720</strong>
+                                                </th>
+                                                <th class="tg-o9xr plazo">
+                                                    <strong>540</strong>
+                                                </th>
+                                                <th class="tg-o9xr plazo">
+                                                    <strong>360</strong>
+                                                </th>
+                                                <th class="tg-o9xr plazo">
+                                                    <strong>270</strong>
+                                                </th>
+                                                <th class="tg-o9xr plazo">
+                                                    <strong>180</strong>
+                                                </th>
+                                                <th class="tg-o9xr plazo">
+                                                    <strong>90</strong>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="detalles">
+                                            <tr class="filas">
+                                                <td class="tg-o9xr plazo" rowspan="2">Monto</td>
+                                                <td class="tg-o9xr">
+                                                    Mayor o igual a US$1,000 y menor a US$40,000
+                                                </td>
+                                                <td class="tg-dj2v">2.00%</td>
+                                                <td class="tg-dj2v">1.75%</td>
+                                                <td class="tg-dj2v">1.50%</td>
+                                                <td class="tg-dj2v">1.30%</td>
+                                                <td class="tg-dj2v">0.85%</td>
+                                                <td class="tg-dj2v">0.80%</td>
+                                                <td class="tg-dj2v">0.75%</td>
+                                            </tr>
+                                            <tr class="filas">
+                                                <td class="tg-o9xr">Mayor o igual a US$40,000</td>
+                                                <td class="tg-dj2v">
+                                                    <span class="label label-dp">Super Tasa</span>
+                                                    <strong>2.50%</strong>
+                                                </td>
+                                                <td class="tg-dj2v">2.40%</td>
+                                                <td class="tg-dj2v">2.30%</td>
+                                                <td class="tg-dj2v">2.10%</td>
+                                                <td class="tg-dj2v">1.00%</td>
+                                                <td class="tg-dj2v">0.95%</td>
+                                                <td class="tg-dj2v">0.80%</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- simulador -->
+        <div id="simuladorSection" class="pt-5 pb-5">
+            <div class="centrado dp-simulador">
+                <div class="grilla-6 grilla-sm-12">
+                    <div class="grilla-10 grilla-sm-12">
+                        <h3 class="dp-title mb-2">Simula tu inversión:</h3>
+                        <label for="" class="mb-1">
+                            ¿En qué moneda quieres invertir?
+                        </label>
+                        <div class="d-flex justify-content-between mb-2">
+                            <button id="btnSoles" onClick=ActivarSoles() class="dp-btn-select active" style="border:0px">Soles</button>
+                            <button id="btnDolares" onClick=ActivarDolares() class="dp-btn-select" style="border:0px">Dólares</button>
+                        </div>
+                        <div id="content_monto" class="form-group">
+                            <label for="txtMonto" class="mb-1">
+                                ¿Cuánto deseas invertir?
+                                <span class="ico-info">
+                                    <span class="dp-tooltip">Recuerda que a mayor monto, mejor tasa</span>
+                                </span>
+                            </label>
+                            <input class="form-control" id="txtMonto" pattern="[0-9]*" type="Text" placeholder="S/ 0" value="1,000.00">
+                            <span id="lblErrorMonto" class="dp-text-error">Monto mínimo S/ 1,000 o US$ 300.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="plazoDP" class="mb-1">
+                                ¿En cuánto tiempo?
+                                <span class="ico-info">
+                                    <span class="dp-tooltip">Recuerda que a mayor plazo, mejor tasa</span>
+                                </span>
+                            </label>
+                            <select class="form-control" id="cboPlazo">
+                                <option>Seleccione</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="grilla-6 grilla-sm-12 ">
+                    <div class="dp-simulador-blue">
+
+                        <div class="row ">
+                            <div class="grilla-7">
+                                <label class="mb-1" for="">Monto total a recibir</label>
+                                <h3 id="lblTotalIntereses" class="dp-monto"> S/ 0</h3>
+                            </div>
+                            <div class="grilla-5 mb-2">
+                                <label class="mb-1">Tasa :</label>
+                                <h3 class="dp-monto" id="lblTasa">0 %</h3>
+                            </div>
+                            <div class="grilla-12">
+                                <label class="mb-1">Interés ganado al vencimiento [*]</label>
+                                <h3 class="dp-montoGanado mb-1 dp-opacity-5" id="lblInteres">S/ 0 </h3>
+                                <button id="btnSimular" onclick="CalcularSimulacion()" class="slider__boton--blanco d-ambar">Simular</button>
+                                <br>
+                            </div>
+                            <div id="divAbreDeposito" class="grilla-6">
+                                <button class="slider__boton--blanco">Abre tu depósito</button>
+                            </div>
+                            <div id="divCalcularDenuevo" class="grilla-6">
+                                <button id="btnCalcularDenuevo" onclick="CalcularDenuevo()" class="slider__boton--blanco d-lineal">Calcular de nuevo</button>
+                            </div>
+                            <p class="grilla-12 mt-2 mb-1 dp-text-small">[*] Consulta más opciones de pago de intereses en nuestras oficinas BanBif</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="datosSection" class="pt-5 pb-5">
+            <div class="centrado dp-simulador">
+                <div class="grilla-12">
+                    <h3 class="dp-title mb-2 text-center">Continua aquí para ver tu simulación</h3>
+                    <p class="mt-1 mb-3 text-center">Estás cerca, completa tus datos y descubre cuánto crecería tu dinero</p>
+                    <div class="d-flex justify-content-center">
+                        <div class="grilla-4 grilla-sm-6">
+                            <div class="form-group">
+                                <input class="form-control" id="txtDNI" maxlength="8" type="text" placeholder="DNI">
+                            </div>
+                        </div>
+                        <div class=" grilla-4 grilla-sm-6">
+                            <div class="form-group">
+                                <input class="form-control" id="txtMail" type="text" placeholder="Correo Electrónico">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="checkbox text-center">
+                        <label>
+                            <input id="chkDatos" type="checkbox" value="">
+                            <span class="dp-text-small dp-line-text">
+                                He leído la <a href="">Politica de Tratamiento de Protección de Datos Personales</a>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <button id="btnSimular1" onclick="ContinuarSimulacion1()" class="slider__boton--blanco d-ambar">Simular</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--cards Video-->
+        @*<div class="centrado">
+            <div class="row">
+                <div class="col-md-6 col-lg-4 col-xs-12">
+                    <div class="dp-card">
+                        <div>
+                            <iframe width="100%" height="200" src="https://www.youtube.com/embed/x5yqvmODCGw"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                        </div>
+                        <h4 class="dp-card_caption">
+                            <strong> BanBif Cuenta de Ahorro Digital</strong>
+                        </h4>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xs-12">
+                    <div class="dp-card">
+                        <div>
+                            <iframe width="100%" height="200" src="https://www.youtube.com/embed/x5yqvmODCGw"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                        </div>
+                        <h4 class="dp-card_caption">
+                            <strong> BanBif Cuenta de Ahorro Digital</strong>
+                        </h4>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xs-12">
+                    <div class="dp-card">
+                        <div>
+                            <iframe width="100%" height="200" src="https://www.youtube.com/embed/x5yqvmODCGw"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                        </div>
+                        <h4 class="dp-card_caption">
+                            <strong> BanBif Cuenta de Ahorro Digital</strong>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center">
+                <button class="slider__boton--blanco d-ambar">Abre tu cuenta</button>
+            </div>
+        </div>*@
+        <!--mas informacio-->
+        <div id="banbif-landing">
+            <div class="banbif-finish">
+                <div class="banbif-finish-tabs">
+                    <div class="centrado">
+                        <h2>Más información</h2>
+                        <div class="banbif-finish-tabs-links">
+                            <span class="links" data-link="1">
+                                Requisitos
+                                <div class="links-bottom"></div>
+                            </span>
+                            <span class="links active" data-link="2">
+                                Información de interés
+                                <div class="links-bottom"></div>
+                            </span>
+                            <span class="links" data-link="3">
+                                Preguntas frecuentes
+                                <div class="links-bottom"></div>
+                            </span>
+                        </div>
+                        <div class="banbif-finish-tabs-block one" style="display: none">
+                            <div class="col-md-6 col-sm-6 col-xs-12 doc">
+                                <img src="https://www.banbif.com.pe/portals/0/Landings/pasivos/images/icons/ico-doc.png" />
+                                Documento de identidad
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12 doc">
+                                <img src="https://www.banbif.com.pe/portals/0/Landings/pasivos/images/icons/ico-doc.png" />
+                                Firma de contrato
+                            </div>
+                        </div>
+                        <div class="banbif-finish-tabs-block two active">
+                            <div class="col-md-6 col-sm-6 col-xs-12 doc">
+                                <img src="https://www.banbif.com.pe/portals/0/Landings/pasivos/images/icons/ico-pdf.png" /><a href="https://www.banbif.com.pe/Home/Personas/Formularios_Contractuales" target="_blank">
+                                    Formularios
+                                    contractuales
+                                </a>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12 doc">
+                                <img src="https://www.banbif.com.pe/portals/0/Landings/pasivos/images/icons/ico-pdf.png" /><a href="https://www.banbif.com.pe/TarifarioGeneral" target="_blank">Tarifario</a>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12 doc">
+                                <img src="https://www.banbif.com.pe/portals/0/Landings/pasivos/images/icons/ico-pdf.png" /><a href="https://www.banbif.com.pe/Portals/0/PortalOld/informaciontransparencia/info_productos_pasivos.htm"
+                                                                                                                              target="_blank">Información sobre Beneficios, Riesgos y Condiciones</a>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12 doc">
+                                <img src="https://www.banbif.com.pe/portals/0/Landings/pasivos/images/icons/ico-pdf.png" /><a href="https://solicitudes.banbif.com.pe/api/campaigns/referral/9f53149e-11c5-4dbb-9813-652d3ce9a730"
+                                                                                                                              target="_blank">Solicita la cancelación de tu cuenta aquí</a>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12 doc">
+                                <img src="https://www.banbif.com.pe/portals/0/Landings/pasivos/images/icons/ico-pdf.png" /><a href="https://www.banbif.com.pe/ganadores_cuenta_ahorro_genial" target="_blank">
+                                    Ganadores y
+                                    premios
+                                </a>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12 doc">
+                                <img src="https://www.banbif.com.pe/portals/0/Landings/pasivos/images/icons/ico-pdf.png" /><a href="/Portals/0/PortalOld/simuladores/pdf/Simulador-cuenta-ahorro-genial.pdf"
+                                                                                                                              target="_blank">Fórmulas y Ejemplos explicativos</a>
+                            </div>
+                        </div>
+                        <div class="banbif-finish-tabs-block three" style="display: none">
+                            <div class="banbif-tabs-item">
+                                <h4 class="active">
+                                    Crea tu Depósito a plazo ¿Ya tienes una cuenta de ahorros
+                                    BanBif?
+                                </h4>
+                                <p>
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab
+                                    eum repudiandae ex eius similique necessitatibus, sequi
+                                    cumque culpa rem praesentium expedita deserunt quidem vero
+                                    explicabo? Nemo harum dolores nulla voluptatem.
+                                </p>
+                            </div>
+                            <div class="banbif-tabs-item">
+                                <h4>
+                                    Crea tu Depósito a plazo ¿Aún no tienes una cuenta de
+                                    ahorros?
+                                </h4>
+                                <p style="display: none"></p>
+                            </div>
+                            <div class="banbif-tabs-item">
+                                <h4>¿Se cobra alguna comisión?</h4>
+                                <p style="display: none">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Nulla, voluptatum enim! Suscipit corporis excepturi nobis!
+                                    Totam natus at numquam corporis sed voluptatum, unde optio
+                                    repudiandae fugit, maiores vero alias ullam.
+                                </p>
+                            </div>
+                            <div class="banbif-tabs-item">
+                                <h4>
+                                    ¿Qué sucede si retiro mi dinero antes del plazo pactada?
+                                </h4>
+                                <p style="display: none">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Sequi similique dolores, consequatur a sunt pariatur
+                                    delectus rerum accusamus laudantium vero tenetur consectetur
+                                    impedit quam eos consequuntur veritatis itaque nam nihil?
+                                </p>
+                            </div>
+                            <div class="banbif-tabs-item">
+                                <h4>
+                                    ¿Puedo retirar los intereses de mi cuenta a plazo recibidos
+                                    mensualmente?
+                                </h4>
+                                <p style="display: none"></p>
+                            </div>
+                            <div class="banbif-tabs-item">
+                                <h4>
+                                    ¿Existe algún cobro por retiro anticipado de mi cuenta Plazo
+                                    Persona Natural?
+                                </h4>
+                                <p style="display: none"></p>
+                            </div>
+                            <div class="banbif-tabs-item">
+                                <h4>
+                                    ¿Cada cuánto recibo los intereses de mi cuenta Plazo Persona
+                                    Natural?
+                                </h4>
+                                <p style="display: none"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--terminos y condicones-->
+        <section id="legal" class="centrado legal">
+            <div class="legal__ejemplo">
+                <img class="legal__trea" src="https://www.banbif.com.pe/Portals/0/Images/depositoplazo/Capsula-TREA-DP.png"
+                     alt="imagen de trea" />
+
+                <img class="legal__compromiso" src="https://www.banbif.com.pe/Portals/0/Images/compromiso.png"
+                     alt="imagen icono de compromiso" />
+
+                <p>
+                    <strong>
+                        Ejemplo: Para un monto inicial de apertura de S/1,000 pactado a un
+                        plazo de 12 meses corresponde una TEA de 1.4% , considerando la
+                        modalidad de pago de intereses al vencimiento. No considera
+                        retiros ni depósitos en la cuenta a plazo durante el periodo
+                        mencionado. La Tasa de Rendimiento Efectivo Anual (TREA) será
+                        igual a la Tasa Efectiva Anual (TEA), calculadas sobre la base de
+                        360 días.
+                    </strong>
+                </p>
+            </div>
+            <div class="legal__condiciones">
+                <p class="legal__texto">ITF:0.005%, según D.S. 150-2007-EF</p>
+
+                <p class="legal__texto">
+                    <strong>Condiciones de Tasa Promocional: </strong>
+
+                    Válido para depósitos a plazo abiertos desde el 13/07/2022 hasta el
+                    31/08/2022, por un monto mayor o igual a S/2,000 o US$1,000, en las
+                    oficinas BanBif o a través de HOLAbank (Banca Digital App y Web).
+                    Aplica para clientes persona natural. No se podrán acoger a la
+                    presente promoción los clientes que transfieran o depositen fondos
+                    provenientes de otras cuentas BanBif, solo fondos nuevos. No aplica
+                    para depósitos a plazo en garantía. La tasa promocional se aplicará
+                    en función del plazo y monto elegidos por el cliente y se mantendrá
+                    solo por el plazo pactado. Al vencimiento, el depósito a plazo se
+                    renovará automáticamente con la tasa que BanBif tenga vigente al
+                    momento de la renovación. En caso de cancelación anticipada del
+                    depósito, se aplicará la tasa de retiro anticipado: 0.5% en soles o
+                    0.1% en dólares por los días transcurridos desde la apertura hasta
+                    la fecha de cancelación anticipada. Monto máximo de depósitos por
+                    cliente S/3´000,000 u US750,000 considerando todos los depósitos
+                    abiertos durante la presente promoción.
+                </p>
+
+                <p class="legal__texto">
+                    <strong>
+                        Condiciones generales de la Campaña Qatar noviembre 2022:
+                    </strong>
+
+                    Vigencia de campaña del 01/04/2022 al 16/10/2022. Podrán participar
+                    en el sorteo “Campaña Qatar 2022” los clientes que abran una Cuenta
+                    de Ahorro Digital, Cuenta Ahorro Genial, Gran Cuenta de Ahorro,
+                    Cuenta de Ahorro Transaccional, Cuenta de Ahorro Conveniente,
+                    Depósito a Plazo, Cuenta Sueldo genial o Cuenta CTS, a través de la
+                    Web de BanBif (banbif. pe), Banca por Internet, BanBif App u
+                    oficinas BanBif, según corresponda.&nbsp;
+
+                    <strong>Condiciones de la Campaña Qatar noviembre 2022:</strong>
+                    <strong> Acumulación de opciones:&nbsp; </strong>Cada participante
+                    podrá acumular una (1) opción por cada Cuenta que abra. Los
+                    titulares de las Cuentas de Ahorro o Sueldo BanBif que participan de
+                    la campaña acumularán hasta setiembre 2022 una (1) opción por cada
+                    S/500 o USD150 de incremento de saldo promedio mensual con respecto
+                    al saldo promedio mensual del cierre del mes anterior. El saldo
+                    promedio a utilizarse se calcula dividiendo la suma de los saldos de
+                    la cuenta al cierre de cada día entre los días calendario del mes
+                    correspondiente. Los titulares de las Cuentas que participan del
+                    sorteo y que tengan S/500 o USD150 de saldo promedio mensual al 31
+                    de marzo del 2022, acumularán una (1) opción.
+                    <strong> Acumulación de opciones adicionales:&nbsp; </strong>
+                    Los Depósitos a Plazo abiertos durante la vigencia acumularán una
+                    (1) opción adicional por cada S/5,000 o USD1,250. Los titulares de
+                    Cuenta Sueldo Genial acumularán una (1) opción adicional por cada
+                    mes que reciban abono de haberes en la cuenta, hasta el cierre del
+                    30 de setiembre del 2022. Los titulares de Cuenta CTS acumularán,
+                    hasta el cierre de setiembre del 2022, una (1) opción adicional al
+                    cierre del último día de cada mes si a dicho momento tienen en la
+                    cuenta al menos S/5,000 o USD1,250 de saldo contable; estas cuentas
+                    CTS también acumularán una (1) opción adicional por cada S/5,000 o
+                    USD1,250 de saldo contable al 16 de octubre del 2022. Se sorteará 1
+                    paquete de viaje doble para Qatar en noviembre 2022. (tickets
+                    aéreos, hospedaje y entrada(s) para partido(s) seleccionado(s) por
+                    BanBif. Será un (1) ganador. Imágenes referenciales. El premio no es
+                    reembolsable, endosable ni transferible, ni podrá ser entregado como
+                    dinero en efectivo. No se permiten cambios ni devoluciones. La fecha
+                    del sorteo será el 18 de octubre del 2022 y se publicará al ganador
+                    en la siguiente página web: banbif.com.pe/sorteos-ganadores el 20 de
+                    octubre de 2022. El día del sorteo se contactará al ganador vía
+                    telefónica al número telefónico registrado en la base de datos de
+                    BanBif, se realizará un máximo de dos (2) intentos para contactarlo.
+                    De no poder contactarlo, este perderá el derecho al premio y se
+                    procederá a sortear nuevamente el premio el mismo día. Es
+                    responsabilidad del participante asegurarse de que sus datos de
+                    contacto como número telefónico y correo electrónico estén
+                    actualizados. El plazo máximo para recoger el premio será hasta el
+                    27 de octubre de 2022, de no recogerse en dicho plazo se perderá el
+                    derecho al mismo. BanBif se reserva el derecho de descalificar a
+                    cualquier participante en caso observe actos o conductas
+                    fraudulentas que contravengan en forma directa o indirecta, los
+                    términos y condiciones de la presente campaña. Premios y condiciones
+                    sujetos a variación. En caso de existir dudas o discrepancias en la
+                    interpretación de estos términos y condiciones, prevalecerá el
+                    criterio de BanBif. El proveedor de los bienes y/o servicios
+                    ofrecidos en esta campaña se responsabiliza por su calidad,
+                    disponibilidad e idoneidad. BanBif solo actúa como intermediario
+                    financiero y no se responsabiliza legalmente por ninguno de los
+                    aspectos antes mencionados ni por cualquier inconveniente, daño o
+                    perjuicio relacionado con los bienes y servicios ofrecidos.
+                </p>
+                <p class="legal__texto">
+                    Depósitos cubiertos por el Fondo de Seguro de Depósitos, hasta por
+                    un monto de S/ 121,910.00 para el trimestre de junio 2022 – agosto
+                    2022, de acuerdo a la Circular SBS N° B-2260-2022, reajustable
+                    trimestralmente. Información sobre los costos de nuestro producto
+                    Depósito a Plazo está disponible en las oficinas de atención al
+                    público a través del tarifario y en nuestra página web www. banbif.
+                    com. pe en “Tarifario General”. MKT 13.07.2022.
+                </p>
+            </div>
+        </section>
+
+        <div class="container">
+            <main role="main">
+                <div id="mainContent-inner2">
+                    <div class="row dnnpane">
+                        <div id="dnn_ContentPaneLower" class="col-md-12 contentPane spacingTop">
+                            <div class="DnnModule DnnModule-DNN_HTML DnnModule-4500 DnnVersionableControl">
+                                <a name="4500"></a>
+                                <div class="DNNContainer_noTitle">
+                                    <div id="dnn_ctr4500_ContentPane">
+                                        <!-- Start_Module_4500 -->
+                                        <div id="dnn_ctr4500_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+                                            <div id="dnn_ctr4500_HtmlModule_lblContent">
+                                                <script rel="display: none;"
+                                                        src="~/Content/Portals/0/Landings/holabank/js/modal-holabank.js"></script>
+                                                <div id="dp-modal" class="modal fade modal-home" role="dialog" aria-hidden="true"
+                                                     style="display: none">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header text-center">
+                                                                <button type="button" class="close cerrarModal" data-dismiss="modal">
+                                                                    ×
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body text-center">
+                                                                <article>
+                                                                    <h6 class="mb-2">
+                                                                        <strong>
+                                                                            Ya tengo una Cuenta de Ahorros BanBif
+                                                                        </strong>
+                                                                    </h6>
+                                                                    <p>
+                                                                        Ingresa a tu Banca Digital y comienza a
+                                                                        ganar intereses con tu depósito.
+                                                                    </p>
+                                                                    <a href="https://nuevabancadigital.banbif.com.pe/BanBif.ICBanking.UI/#/login"
+                                                                       target="_blank" class="mt-2 desktop btnAction btn-morado">Comencemos</a>
+                                                                    <a href="http://onelink.to/ezywua" target="_blank"
+                                                                       class="mt-2 mobile btnAction btn-morado">Comencemos</a>
+                                                                </article>
+                                                                <article>
+                                                                    <h6 class="mb-2">
+                                                                        <strong>No tengo una cuenta BanBif aún</strong>
+                                                                    </h6>
+                                                                    <p>
+                                                                        Abre una Cuenta Digital sin necesidad de
+                                                                        salir de casa.
+                                                                    </p>
+                                                                    <a href="https://www.banbif.com.pe/personas/Cuenta-Digital-moneda" target="_blank"
+                                                                       class="mt-2 btnAction-line">Abrir Cuenta</a>
+                                                                </article>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <script>
+                                                    $(document).ready(function () {
+                                                        $("#dp-modal-btn").click(function () {
+                                                            $("#dp-modal").modal("show");
+                                                        });
+                                                        $(".cerrarModal").click(function () {
+                                                            $("#appModal").modal("hide");
+                                                        });
+                                                    });
+                                                </script>
+                                            </div>
+                                        </div>
+                                        <!-- End_Module_4500 -->
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.mainContent-inner -->
+            </main>
+            <!-- /.mainContent -->
+        </div>
+
+        <script type="text/javascript" src="~/Content/Portals/_default/Skins/BANBIF_Skin/js/jquery.cycle2.min.js"></script>
+        <script type="text/javascript" src="~/Content/Portals/_default/Skins/BANBIF_Skin/jqueryui/jquery-ui.js"></script>
+        <script type="text/javascript" src="~/Content/Portals/_default/Skins/BANBIF_Skin/js/jQuery.succinct.min.js"></script>
+        <script type="text/javascript"
+                src="~/Content/Portals/_default/Skins/BANBIF_Skin/js/jquery.ui.touch-punch.min.js"></script>
+        <script type="text/javascript" src="~/Content/Portals/_default/Skins/BANBIF_Skin/js/jquery.qtip.js"></script>
+        <script type="text/javascript"
+                src="~/Content/Portals/_default/Skins/BANBIF_Skin/js/jquery.flexslider-min.js"></script>
+        <script type="text/javascript"
+                src="~/Content/Portals/_default/Skins/BANBIF_Skin/js/funciones.js?n=nes0.0.3"></script>
+
+        <input name="ScrollTop" type="hidden" id="ScrollTop" />
+        <input name="__dnnVariable" type="hidden" id="__dnnVariable" autocomplete="off"
+               value="`{`__scdoff`:`1`,`sf_siteRoot`:`/`,`sf_tabId`:`917`,`evoq_TabId`:`917`,`evoq_PageLanguage`:`en-US`,`evoq_ContentItemId`:`-1`,`evoq_UrlReferrer`:``,`evoq_UrlPath`:`https%3a%2f%2fwww.banbif.com.pe%2fdepositoplazo`,`evoq_UrlQuery`:`%3fTabId%3d917%26language%3den-US`,`evoq_ContentItemReferrer`:`-1`,`evoq_PersonalizedUrlReferrer`:`-1`,`evoq_DisableAnalytics`:`False`}" />
+        <input name="__RequestVerificationToken" type="hidden"
+               value="dhL9U5wuDpq6lPim6r-GuGYG3JmvbG6lqECiZ_RRVhXGRfWK45j0PeNLlyRX8w_CNbnr6Q2" />
+
+        <input style="display:none;" type="number" id="txtMontoReal" value="1000">
+    </form>
+</body>
+
+</html>
+<script src="~/Content/Portals/_default/Skins/BANBIF_Skin/js/borders.js" type="text/javascript"></script>
+<script src="~/Content/SDP_Js.js" type="text/javascript"></script>
+<script>
+    $(document).ready(function () {
+        $("#dp-modal-btn").click(function () {
+            $("#dp-modal").modal("show");
+        });
+        $(".cerrarModal").click(function () {
+            $("#appModal").modal('hide')
+        });
+    });
+
+</script>
+<script>
+
+    document.getElementById("txtMonto").onblur = function () {
+        this.value = parseFloat(this.value.replace(/,/g, ""))
+            .toFixed(2)
+            .toString()
+            .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+        document.getElementById("txtMontoReal").value = this.value.replace(/,/g, "")
+
+    }
+
+
+    if (sessionStorage.dni == undefined) {
+
+
+
+
+    } else {
+
+        var txtdni = document.getElementById("txtDNI");
+        var txtmail = document.getElementById("txtMail");
+        var chkdatos = document.getElementById("chkDatos");
+
+        txtdni.value = sessionStorage.dni;
+        txtmail.value = sessionStorage.mail;
+        txtmail.textcontent = sessionStorage.mail;
+        valido = true;
+        chkDatos.checked = true;
+    }
+
+    var btnDolares = document.getElementById("btnDolares");
+    var btnSoles = document.getElementById("btnSoles");
+
+    sessionStorage.setItem('moneda', 'Soles');
+
+    var matriz;
+
+    function BuscarEnMatriz(valor) {
+
+    }
+
+    function CalcularDenuevo() {
+
+        //var opcion = confirm("Desea realizar un nuevo calculo");
+        //if (opcion == true) {
+
+        var divAbreDeposito = document.getElementById("divAbreDeposito");
+        var divCalcularDenuevo = document.getElementById("divCalcularDenuevo");
+        var btnSimular = document.getElementById("btnSimular");
+
+        btnSimular.style.display = "block";
+
+        divAbreDeposito.hidden = true;
+        divCalcularDenuevo.hidden = true;
+
+        var cboPlazo = document.getElementById("cboPlazo")
+
+        cboPlazo.disabled = false;
+
+        var txtMonto = document.getElementById("txtMonto")
+
+        txtMonto.disabled = false;
+
+        if (sessionStorage.moneda == 'Soles') {
+            ActivarSoles()
+        } else if (sessionStorage.moneda == 'Dolares') {
+            ActivarDolares();
+        }
+
+
+        btnSoles.disabled = false;
+        btnDolares.disabled = false;
+
+
+
+    }
+
+
+    function ActivarSoles() {
+
+        if (btnSoles.classList.contains("active")) {
+
+
+        } else {
+            btnSoles.classList.toggle("active")
+
+            if (btnDolares.classList.contains("active")) {
+                btnDolares.classList.toggle("active")
+            }
+        }
+
+        sessionStorage.setItem('moneda', 'Soles');
+        console.log("Cambio a Soles")
+
+        var oBDataExtra = {};
+
+        $.ajax({
+            url: sessionStorage.APP + 'Simulador/ObtenerMatriz1',
+            type: "POST",
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            processData: true,
+            data: JSON.stringify(oBDataExtra),
+            success: function (response) {
+                console.log(response.Data.Matriz);
+                matriz = response.Data.Matriz;
+                CalcularCambio();
+
+            },
+            failure: function (msg) {
+                console.log(msg);
+                //$.unblockUI();
+            },
+            error: function (xhr, status, error) {
+                console.log(error);
+                //$.unblockUI();
+            },
+            complete: function () {
+                //$.unblockUI();
+                //$("#prueba").dialog("close")
+            }
+        });
+
+    }
+
+
+    function ActivarDolares() {
+
+        if (btnDolares.classList.contains("active")) {
+
+
+        } else {
+            btnDolares.classList.toggle("active")
+
+            if (btnSoles.classList.contains("active")) {
+                btnSoles.classList.toggle("active")
+            }
+        }
+
+        sessionStorage.setItem('moneda', 'Dolares');
+        console.log("Cambio a Dolares");
+
+        var oBDataExtra = {};
+
+        $.ajax({
+            url: sessionStorage.APP + 'Simulador/ObtenerMatrizDolar',
+            type: "POST",
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            processData: true,
+            data: JSON.stringify(oBDataExtra),
+            success: function (response) {
+                console.log(response.Data.Matriz);
+                matriz = response.Data.Matriz;
+                CalcularCambio()
+
+            },
+            failure: function (msg) {
+                console.log(msg);
+                //$.unblockUI();
+            },
+            error: function (xhr, status, error) {
+                console.log(error);
+                //$.unblockUI();
+            },
+            complete: function () {
+                //$.unblockUI();
+                //$("#prueba").dialog("close")
+            }
+        });
+
+
+
+    }
+
+    function CalcularCambio() {
+        {
+
+            var cboPlazo = document.getElementById("cboPlazo")
+            var tasa = document.getElementById("lblTasa");
+            var lblErrorMonto = document.getElementById("lblErrorMonto")
+            var monto = document.getElementById("txtMontoReal").value;
+            sessionStorage.setItem('plazo', cboPlazo.value);
+
+            if (sessionStorage.moneda == 'Soles') {
+                console.log('Entro a Soles')
+                for (var i in matriz) {
+                    if (matriz[i].plazo == cboPlazo.value) {
+
+                        if (monto >= 1000 && monto < 20000) {
+                            tasa.textContent = matriz[i].r1ka20k + '%'
+                            sessionStorage.setItem('tasa', matriz[i].r1ka20k);
+
+                            console.log(sessionStorage.tasa + '' + cboPlazo.value);
+                            console.log(matriz[i].r1ka20k);
+                            console.log(matriz[i]);
+
+                            lblErrorMonto.hidden = true;
+                            if (content_monto.classList.contains("dp-form-error")) {
+                                content_monto.classList.toggle("dp-form-error")
+                            } else {
+
+                            }
+                            //tasa.value = item.r1ka20k
+                        } else if (monto >= 20000 && monto < 30000) {
+                            tasa.textContent = matriz[i].r20ka30k + '%'
+                            lblErrorMonto.hidden = true;
+                            if (content_monto.classList.contains("dp-form-error")) {
+                                content_monto.classList.toggle("dp-form-error")
+                            } else {
+
+                            }
+                            sessionStorage.setItem('tasa', matriz[i].r20ka30k);
+                            //tasa.value = item.r20ka30k
+                        } else if (monto >= 30000 && monto < 85000) {
+                            sessionStorage.setItem('tasa', matriz[i].r30ka85k);
+                            tasa.textContent = matriz[i].r30ka85k + '%'
+                            lblErrorMonto.hidden = true;
+                            if (content_monto.classList.contains("dp-form-error")) {
+                                content_monto.classList.toggle("dp-form-error")
+                            } else {
+
+                            }
+                            //tasa.value = item.r30ka85k
+                        } else if (monto >= 85000 && monto < 100000) {
+                            sessionStorage.setItem('tasa', matriz[i].r85ka100k);
+                            tasa.textContent = matriz[i].r85ka100k + '%'
+                            if (content_monto.classList.contains("dp-form-error")) {
+                                content_monto.classList.toggle("dp-form-error")
+                            } else {
+
+                            }
+                            lblErrorMonto.hidden = true;
+                            //tasa.value = item.r85ka100k
+                        } else if (monto >= 100000) {
+                            sessionStorage.setItem('tasa', matriz[i].r100k);
+                            tasa.textContent = matriz[i].r100k + '%'
+                            if (content_monto.classList.contains("dp-form-error")) {
+                                content_monto.classList.toggle("dp-form-error")
+                            } else {
+
+                            }
+                            lblErrorMonto.hidden = true;
+                            //tasa.value = item.r100k
+                        } else {
+                            sessionStorage.setItem('tasa', '0');
+                            tasa.textContent = '0' + '%'
+                            if (content_monto.classList.contains("dp-form-error")) {
+
+
+                            } else {
+                                content_monto.classList.toggle("dp-form-error")
+
+                                lblErrorMonto.hidden = false;
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            } else if (sessionStorage.moneda == 'Dolares') {
+
+                console.log('Entro a Dolares');
+
+                for (var i in matriz) {
+                    if (matriz[i].plazo == cboPlazo.value) {
+
+                        if (monto >= 350 && monto < 5000) {
+                            tasa.textContent = matriz[i].r1 + '%'
+                            sessionStorage.setItem('tasa', matriz[i].r1);
+                            console.log(sessionStorage.tasa);
+                            lblErrorMonto.hidden = true;
+                            if (content_monto.classList.contains("dp-form-error")) {
+                                content_monto.classList.toggle("dp-form-error")
+                            } else {
+
+                            }
+                            //tasa.value = item.r1ka20k
+                        } else if (monto >= 5000 && monto < 10000) {
+                            tasa.textContent = matriz[i].r2 + '%'
+                            lblErrorMonto.hidden = true;
+                            if (content_monto.classList.contains("dp-form-error")) {
+                                content_monto.classList.toggle("dp-form-error")
+                            } else {
+
+                            }
+                            sessionStorage.setItem('tasa', matriz[i].r2);
+                            //tasa.value = item.r20ka30k
+                        } else if (monto >= 10000 && monto < 50000) {
+                            sessionStorage.setItem('tasa', matriz[i].r3);
+                            tasa.textContent = matriz[i].r3 + '%'
+                            lblErrorMonto.hidden = true;
+                            if (content_monto.classList.contains("dp-form-error")) {
+                                content_monto.classList.toggle("dp-form-error")
+                            } else {
+
+                            }
+                            //tasa.value = item.r30ka85k
+                        } else if (monto >= 50000) {
+                            sessionStorage.setItem('tasa', matriz[i].r4);
+                            tasa.textContent = matriz[i].r4 + '%'
+                            if (content_monto.classList.contains("dp-form-error")) {
+                                content_monto.classList.toggle("dp-form-error")
+                            } else {
+
+                            }
+                            lblErrorMonto.hidden = true;
+                            //tasa.value = item.r100k
+                        } else {
+                            sessionStorage.setItem('tasa', '0');
+                            tasa.textContent = '0' + '%'
+                            if (content_monto.classList.contains("dp-form-error")) {
+
+
+                            } else {
+                                content_monto.classList.toggle("dp-form-error")
+
+                                lblErrorMonto.hidden = false;
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+
+    $(document).ready(function () {
+
+
+        //Obtener URL
+        sessionStorage.setItem("APP", "@ViewBag.App");
+
+
+        var content_monto = document.getElementById("content_monto");
+        //Cambio de Estilos Input
+        if (content_monto.classList.contains("dp-form-error")) {
+            content_monto.classList.toggle("dp-form-error")
+        }
+
+        var oBDataExtra = {};
+
+        $.ajax({
+            url: sessionStorage.APP + 'Simulador/ObtenerMatriz1',
+            type: "POST",
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            processData: true,
+            data: JSON.stringify(oBDataExtra),
+            success: function (response) {
+                console.log(response.Data.Matriz);
+                matriz = response.Data.Matriz;
+
+
+                $.each(response.Data.Matriz, function (i, item) {
+                    $('#cboPlazo').append($('<option>', {
+                        value: item.plazo,
+                        text: item.plazo + ' días'
+                    }));
+                });
+
+
+
+            },
+            failure: function (msg) {
+                console.log(msg);
+                //$.unblockUI();
+            },
+            error: function (xhr, status, error) {
+                console.log(error);
+                //$.unblockUI();
+            },
+            complete: function () {
+                //$.unblockUI();
+                //$("#prueba").dialog("close")
+            }
+        });
+
+
+        //Ocultar Seccion de Toma de Datos
+        var datosSection = document.getElementById("datosSection")
+        datosSection.hidden = true;
+
+        var lblErrorMonto = document.getElementById("lblErrorMonto")
+
+        lblErrorMonto.hidden = true;
+
+        //////Ocultar Botones de Deposito y Calculo
+
+        var divAbreDeposito = document.getElementById("divAbreDeposito");
+        var divCalcularDenuevo = document.getElementById("divCalcularDenuevo");
+
+        //divCalcularDenuevo.style.display = "none";
+        //divAbreDeposito.style.display = "none";
+
+        divAbreDeposito.hidden = true;
+        divCalcularDenuevo.hidden = true;
+        var cboPlazo = document.getElementById("cboPlazo")
+        cboPlazo.addEventListener("change", CalcularCambio);
+
+        //$.ajax({
+
+        //    url: "https://localhost:44343/api/sdp/obtenerPlazos",
+        //    type: "POST",
+        //    dataType: "json",
+        //    contentType: "application/json; charset=utf-8",
+        //    processData: true,
+        //    success: function (resp) {
+        //        console.log(resp);
+
+        //        $.each(resp, function (i, item) {
+        //            $('#cboPlazo').append($('<option>', {
+        //                value: item.plazo,
+        //                text: item.plazo
+        //            }));
+        //        });
+
+        //    }
+        //});
+
+    });
+
+    function ContinuarSimulacion1() {
+
+        var txtDNI = document.getElementById("txtDNI");
+        var txtMail = document.getElementById("txtMail");
+        var chkDatos = document.getElementById("chkDatos");
+
+
+        if (txtDNI.value.length < 8 || txtDNI.value.length >= 9) {
+
+            alert("Por favor introduzca un DNI Valido");
+            return;
+
+        }
+
+        if (!valido) {
+            alert("Por favor introduzca un Mail Valido");
+            return;
+        }
+
+
+        if (!chkDatos.checked) {
+            alert('Debe aceptar la Politica de Tratamiento de Protección de Datos Personales');
+            return
+        }
+
+        sessionStorage.setItem('dni', txtDNI.value);
+        sessionStorage.setItem('mail', txtMail.value);
+        sessionStorage.setItem('Tdatos', 1);
+
+
+
+        var simuladorSection = document.getElementById("simuladorSection")
+        var datosSection = document.getElementById("datosSection")
+
+
+        datosSection.hidden = true;
+        simuladorSection.hidden = false;
+
+        divCalcularDenuevo.hidden = false;
+        divAbreDeposito.hidden = false;
+
+        var cboPlazo = document.getElementById("cboPlazo")
+
+        cboPlazo.disabled = true;
+
+        var txtMonto = document.getElementById("txtMonto")
+
+        txtMonto.disabled = true;
+
+        btnDolares.classList.remove("active")
+        btnSoles.classList.remove("active");
+
+        btnSoles.disabled = true;
+        btnDolares.disabled = true;
+
+        var oBDataExtra = {};
+
+        $.ajax({
+            url: sessionStorage.APP + 'Simulador/RegistrarSimulacion',
+            type: "POST",
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            processData: true,
+            data: JSON.stringify(sessionStorage),
+            success: function (response) {
+                console.log(response);
+
+            },
+            failure: function (msg) {
+                console.log(msg);
+                //$.unblockUI();
+            },
+            error: function (xhr, status, error) {
+                console.log(error);
+                //$.unblockUI();
+            },
+            complete: function () {
+                //$.unblockUI();
+                //$("#prueba").dialog("close")
+            }
+        });
+
+
+
+        //Guardar Log 2
+
+        //Guardar Simulacion
+    }
+
+    function stringToHash(string) {
+
+        var hash = 0;
+
+        if (string.length == 0) return hash;
+
+        for (i = 0; i < string.length; i++) {
+            char = string.charCodeAt(i);
+            hash = ((hash << 5) - hash) + char;
+            hash = hash & hash;
+        }
+
+        return hash;
+    }
+
+    function CalcularSimulacion() {
+
+        var txtMonto = document.getElementById("txtMontoReal")
+        var cboPlazo = document.getElementById("cboPlazo")
+        if (cboPlazo.value == 'Seleccione') {
+            alert('Seleccione cuanto tiempo desea invertir');
+            return;
+        }
+        //else if (txtMonto.value < 1000) {
+        //    alert('Debe Ingresar un monto mayor o igual a 1000');
+        //    return
+        //}
+        var btnSimular = document.getElementById("btnSimular");
+
+        btnSimular.style.display = "none";
+
+        var simuladorSection = document.getElementById("simuladorSection")
+        var datosSection = document.getElementById("datosSection")
+
+        datosSection.hidden = false;
+        simuladorSection.hidden = true;
+
+
+
+
+        var plazo = document.getElementById("cboPlazo")
+        var plazoid = document.getElementById("cboPlazo").value
+
+        var monto = document.getElementById("txtMontoReal").value;
+        sessionStorage.setItem('monto', monto);
+
+        var interes = document.getElementById("lblInteres");
+
+        var totalinteres = document.getElementById("lblTotalIntereses");
+
+
+        var plazoSession = sessionStorage.plazo;
+        var tasaSession = sessionStorage.tasa;
+        var montoSession = sessionStorage.monto;
+
+
+        var exponente = (plazoSession) * 1 / 360;
+        var potencia = 1 + (tasaSession / 100);
+
+
+        sessionStorage.setItem('interes', ((Math.pow(potencia, exponente) - 1) * montoSession).toFixed(2));
+
+        var montoNum = montoSession * 1;
+
+        var totalInteresSumado = montoNum + ((Math.pow(potencia, exponente) - 1) * montoSession).toFixed(2) * 1;
+        sessionStorage.setItem('total', totalInteresSumado);
+
+        var calculointeres = ((Math.pow(potencia, exponente) - 1) * montoSession).toFixed(2)
+
+        var prefijo = 'S/ ';
+
+        if (sessionStorage.moneda == 'Dolares') {
+            prefijo = '$ '
+        }
+
+        totalinteres.textContent = prefijo + new Intl.NumberFormat('es-MX').format(totalInteresSumado);
+
+        interes.textContent = prefijo + new Intl.NumberFormat('es-MX').format(calculointeres);
+
+        if (sessionStorage.dni.length > 2 && sessionStorage.mail.length > 2) {
+
+            var simuladorSection = document.getElementById("simuladorSection")
+            var datosSection = document.getElementById("datosSection")
+
+            datosSection.hidden = true;
+            simuladorSection.hidden = false;
+            //btnSimular.style.display = "block";
+            ContinuarSimulacion1();
+        }
+
+        //Guardar Log 1
+
+
+    }
+
+</script>
